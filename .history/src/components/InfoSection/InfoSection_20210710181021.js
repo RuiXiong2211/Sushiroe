@@ -44,12 +44,12 @@ const InfoSection = ({
                   </Button>
                 </Link>
               </TextWrapper>
-            </InfoColumn>
-            <InfoColumn>
+              <InfoColumn>
                   <ImgWrapper start = {start}>
                       <Img src={img} alt={alt}/>
                   </ImgWrapper>
               </InfoColumn>
+            </InfoColumn>
           </InfoRow>
         </Container>
       </InfoSec>

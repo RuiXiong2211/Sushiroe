@@ -11,6 +11,6 @@ export const homeObjOne = {
   buttonLabel: 'Get Started',
   primary: true,
   start: '',
-  img: require('../../images/undraw_japan_ubgk.svg').default,
-  alt: 'Image',
+  img: '',
+  alt: 'Image'
 };

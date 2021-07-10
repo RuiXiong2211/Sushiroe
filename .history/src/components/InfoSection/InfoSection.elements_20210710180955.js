@@ -76,4 +76,5 @@ export const Img = styled.img`
     vertical-align: middle;
     display: inline-block;
     max-height: 500px;
+
 `
