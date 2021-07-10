@@ -82,7 +82,8 @@ export const NavItem = styled.li`
     border-bottom: 2px solid transparent;
 
     &:hover {
-        border-bottom: 2px solid yellow;
+        border-bottom: 2px solid #4b59f7;
+        color:pink
     }
 
     @media screen and (max-width: 960px) {
@@ -113,26 +114,4 @@ export const NavLinks = styled(Link)`
             transition: all 0.3s ease;
         }
     }
-`
-
-export const NavItemBtn = styled.li`
-  @media screen and (max-width: 960px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 120px;
-  }
-`
-
-export const NavBtnLink = styled(Link)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  padding: 8px 16px;
-  height: 100%;
-  width: 100%;
-  border: none;
-  outline: none;
 `

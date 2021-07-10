@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Button } from '../../globalStyles';
 import {
   Nav,
@@ -70,7 +70,7 @@ const Navbar = () => {
                   </NavBtnLink>
                 ) : (
                   <NavBtnLink to='/sign-up'>
-                    <Button fontBig primary>
+                    <Button  fontBig primary>
                       SIGN UP
                     </Button>
                   </NavBtnLink>
