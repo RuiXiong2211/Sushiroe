@@ -42,7 +42,7 @@ const Navbar = () => {
         <NavbarContainer>
           <NavLogo to="/">
             <NavIcon />
-            Sushiya
+            ULTRA
           </NavLogo>
           <MobileIcon onClick={handleClick}>
             <MobileIconButton click={click} />
@@ -56,6 +56,11 @@ const Navbar = () => {
               <NavItem>
                   <NavLinks to='/'>
                       Menu
+                  </NavLinks>
+              </NavItem>
+              <NavItem>
+                  <NavLinks to='/'>
+                      Products
                   </NavLinks>
               </NavItem>
               <NavItemBtn>
