@@ -26,7 +26,8 @@ const InfoSection = ({
   primary,
   start,
   img,
-  alt
+  alt,
+  hasButton,
 }) => {
   return (
     <>
@@ -38,11 +39,12 @@ const InfoSection = ({
                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
+                {hasButton ?
                 <Link to="/sign-up">
                   <Button big fontBig primary={primary}>
                     {buttonLabel}
                   </Button>
-                </Link>
+                </Link> : null}
               </TextWrapper>
             </InfoColumn>
             <InfoColumn>
