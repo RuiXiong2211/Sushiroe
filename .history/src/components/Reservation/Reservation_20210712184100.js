@@ -25,6 +25,8 @@ const Reservation = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(state);
+
     for (let key in state) {
       if (state[key] === "") {
         setError(`*You must provide the ${key} details.`);

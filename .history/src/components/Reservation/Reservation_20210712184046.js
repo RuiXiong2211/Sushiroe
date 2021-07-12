@@ -25,6 +25,8 @@ const Reservation = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(state);
+
     for (let key in state) {
       if (state[key] === "") {
         setError(`*You must provide the ${key} details.`);
@@ -115,7 +117,7 @@ const Reservation = () => {
                     type="radio"
                     value={slot}
                     name="time"
-                    checked={state.time === slot}
+                    checked={state.time === {slot}}
                     onChange={handleInput}
                   />
                   {slot}

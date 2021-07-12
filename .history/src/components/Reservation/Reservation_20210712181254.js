@@ -25,6 +25,8 @@ const Reservation = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(state);
+
     for (let key in state) {
       if (state[key] === "") {
         setError(`*You must provide the ${key} details.`);
@@ -51,17 +53,21 @@ const Reservation = () => {
     setState((prev) => ({ ...prev, [inputField]: value }));
   };
 
-  const timeSlots = [
-    "12:00",
-    "13:00",
-    "14:00",
-    "15:00",
-    "16:00",
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-  ];
+  const radioButtons = () => {
+    let startTime = 12;
+    for (let i = 0; i < 9; i++) {
+      <label>
+        <input
+          type="radio"
+          value={startTime}
+          name="time"
+          checked={state.time === "12:00"}
+          onChange={handleInput}
+        />
+        {startTime + ":00"}
+      </label>;
+    }
+  };
 
   return (
     <>
@@ -108,20 +114,7 @@ const Reservation = () => {
           />
           <label htmlFor="time"> Time </label>
           <StyledFieldset>
-            {timeSlots.map((slot, index) => {
-              return (
-                <label key={index}>
-                  <input
-                    type="radio"
-                    value={slot}
-                    name="time"
-                    checked={state.time === slot}
-                    onChange={handleInput}
-                  />
-                  {slot}
-                </label>
-              );
-            })}
+            <radioButtons />
           </StyledFieldset>
           {error && (
             <StyledError>
