@@ -34,7 +34,7 @@ const Reservation = () => {
         return;
       }
     }
-    setError('*We have received your reservation!');
+    setError('We have received your reservation!');
     initialState = {
         name: "",
         email: "",
@@ -138,56 +138,6 @@ const Reservation = () => {
                 onChange={handleInput}
               />
               15:00
-            </label>
-            <label>
-              <input
-                type="radio"
-                value="15:00"
-                name="time"
-                checked={state.time === '15:00'}
-                onChange={handleInput}
-              />
-              16:00
-            </label>
-            <label>
-              <input
-                type="radio"
-                value="17:00"
-                name="time"
-                checked={state.time === '17:00'}
-                onChange={handleInput}
-              />
-              17:00
-            </label>
-            <label>
-              <input
-                type="radio"
-                value="18:00"
-                name="time"
-                checked={state.time === '18:00'}
-                onChange={handleInput}
-              />
-              18:00
-            </label>
-            <label>
-              <input
-                type="radio"
-                value="19:00"
-                name="time"
-                checked={state.time === '19:00'}
-                onChange={handleInput}
-              />
-              19:00
-            </label>
-            <label>
-              <input
-                type="radio"
-                value="20:00"
-                name="time"
-                checked={state.time === '20:00'}
-                onChange={handleInput}
-              />
-              20:00
             </label>
             
           </StyledFieldset>

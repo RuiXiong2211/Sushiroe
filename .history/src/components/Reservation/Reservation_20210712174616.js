@@ -34,7 +34,7 @@ const Reservation = () => {
         return;
       }
     }
-    setError('*We have received your reservation!');
+    setError('We have received your reservation!');
     initialState = {
         name: "",
         email: "",
@@ -104,92 +104,21 @@ const Reservation = () => {
                 type="radio"
                 value="12:00"
                 name="time"
-                checked={state.time === '12:00'}
+                checked={state.time === 'female'}
                 onChange={handleInput}
               />
-              12:00
+              Female
             </label>
             <label>
               <input
                 type="radio"
                 value="13:00"
                 name="time"
-                checked={state.time === '13:00'}
+                checked={state.time === 'male'}
                 onChange={handleInput}
               />
-              13:00
+              Male
             </label>
-            <label>
-              <input
-                type="radio"
-                value="14:00"
-                name="time"
-                checked={state.time === '14:00'}
-                onChange={handleInput}
-              />
-              14:00
-            </label>
-            <label>
-              <input
-                type="radio"
-                value="15:00"
-                name="time"
-                checked={state.time === '15:00'}
-                onChange={handleInput}
-              />
-              15:00
-            </label>
-            <label>
-              <input
-                type="radio"
-                value="15:00"
-                name="time"
-                checked={state.time === '15:00'}
-                onChange={handleInput}
-              />
-              16:00
-            </label>
-            <label>
-              <input
-                type="radio"
-                value="17:00"
-                name="time"
-                checked={state.time === '17:00'}
-                onChange={handleInput}
-              />
-              17:00
-            </label>
-            <label>
-              <input
-                type="radio"
-                value="18:00"
-                name="time"
-                checked={state.time === '18:00'}
-                onChange={handleInput}
-              />
-              18:00
-            </label>
-            <label>
-              <input
-                type="radio"
-                value="19:00"
-                name="time"
-                checked={state.time === '19:00'}
-                onChange={handleInput}
-              />
-              19:00
-            </label>
-            <label>
-              <input
-                type="radio"
-                value="20:00"
-                name="time"
-                checked={state.time === '20:00'}
-                onChange={handleInput}
-              />
-              20:00
-            </label>
-            
           </StyledFieldset>
           {error && (
             <StyledError>

@@ -152,6 +152,16 @@ const Reservation = () => {
             <label>
               <input
                 type="radio"
+                value="16:00"
+                name="time"
+                checked={state.time === '16:00'}
+                onChange={handleInput}
+              />
+              16:00
+            </label>
+            <label>
+              <input
+                type="radio"
                 value="17:00"
                 name="time"
                 checked={state.time === '17:00'}
@@ -178,16 +188,6 @@ const Reservation = () => {
                 onChange={handleInput}
               />
               19:00
-            </label>
-            <label>
-              <input
-                type="radio"
-                value="20:00"
-                name="time"
-                checked={state.time === '20:00'}
-                onChange={handleInput}
-              />
-              20:00
             </label>
             
           </StyledFieldset>
