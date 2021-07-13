@@ -1,0 +1,11 @@
+POST http://localhost:4000/app/reservation
+Content-Type: application/json
+
+{
+    "name": "Rui Xiong",
+    "email": "ruixiong@hotmail.com",
+    "phone": "90122513",
+    "pax": "1",
+    "date": "13/07/2021",
+    "time": "11:00"
+}
