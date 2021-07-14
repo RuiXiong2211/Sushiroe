@@ -40,6 +40,7 @@ const Reservation = () => {
         emailParams,
         "user_Rb1siOwIIlMA7ruNlgeYh"
       )
+      .then((response) => console.log(response.data))
   }
 
   const handleSubmit = (e) => {

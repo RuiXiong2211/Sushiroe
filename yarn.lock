@@ -4462,6 +4462,21 @@ elliptic@^6.5.3:
     minimalistic-assert "^1.0.1"
     minimalistic-crypto-utils "^1.0.1"
 
+email-js@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/email-js/-/email-js-2.0.2.tgz#c6682e73fae9df700558d413d9e3b7a9fdb5bab0"
+  integrity sha512-ElfOy+BMZbQuivo8Qp+A2Gz6N06ZUHEk+q67O0zgTRU5d+n2rvbfX0w2jyo7B/F+zPJAXq/J1SHaG9ghbhWAPQ==
+
+emailjs-com@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/emailjs-com/-/emailjs-com-3.2.0.tgz#a53cb22f1bc433c701c84c53d8b56eefd5ce7111"
+  integrity sha512-Prbz3E1usiAwGjMNYRv6EsJ5c373cX7/AGnZQwOfrpNJrygQJ15+E9OOq4pU8yC977Z5xMetRfc3WmDX6RcjAA==
+
+emailjs@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/emailjs/-/emailjs-3.5.0.tgz#de1316bbbbbf6da1f9926137b637701b27747fd1"
+  integrity sha512-Ii5im1e9dOhMUKpK51aGKmRGPMUTfW/cffyEPwa0dYZpLoTOLrz4Vk1/1kLh64dZUrzRvxGYOOrCbcVKovWPDw==
+
 emittery@^0.7.1:
   version "0.7.2"
   resolved "https://registry.npmjs.org/emittery/-/emittery-0.7.2.tgz"

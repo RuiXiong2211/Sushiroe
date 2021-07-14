@@ -25,6 +25,7 @@ const Reservation = () => {
   const [state, setState] = useState(initialState);
   const [error, setError] = useState("");
 
+ 
   function sendConfirmationEmail() {
     let emailParams = {
       name: state.name,
@@ -32,14 +33,8 @@ const Reservation = () => {
       pax: state.pax,
       date: state.date,
       time: state.time,
-    };
-    emailjs
-      .send(
-        "service_zzhbm1s",
-        "template_yot0ajf",
-        emailParams,
-        "user_Rb1siOwIIlMA7ruNlgeYh"
-      )
+    }
+    emailjs.send('gmail', 'template_yot0ajf', emailParams, 'user_Rb1siOwIIlMA7ruNlgeYh')
   }
 
   const handleSubmit = (e) => {
@@ -55,8 +50,8 @@ const Reservation = () => {
     axios
       .post("http://localhost:4000/app/reservation", state)
       .then((response) => console.log(response.data));
-
-    sendConfirmationEmail();
+    
+    sendConfirmationEmail()
 
     initialState = {
       name: "",
