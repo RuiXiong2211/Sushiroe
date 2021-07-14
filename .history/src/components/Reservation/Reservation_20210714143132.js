@@ -33,19 +33,17 @@ const Reservation = () => {
       }
     }
     setError("*We have received your reservation!");
-
     axios
       .post("http://localhost:4000/app/reservation", state)
       .then((response) => console.log(response.data));
-
-    initialState = {
-      name: "",
-      email: "",
-      phone: "",
-      pax: "",
-      date: "",
-      time: "",
-    };
+      initialState = {
+        name: "",
+        email: "",
+        phone: "",
+        pax: "",
+        date: "",
+        time: "",
+      };
     setState(initialState);
   };
 

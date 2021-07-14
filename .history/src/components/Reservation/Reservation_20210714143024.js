@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import axios from 'axios'
 
 import {
   Header,
@@ -33,11 +33,6 @@ const Reservation = () => {
       }
     }
     setError("*We have received your reservation!");
-
-    axios
-      .post("http://localhost:4000/app/reservation", state)
-      .then((response) => console.log(response.data));
-
     initialState = {
       name: "",
       email: "",
@@ -46,7 +41,9 @@ const Reservation = () => {
       date: "",
       time: "",
     };
+    axios.post('http://localhost:4000/app/reservation', state)
     setState(initialState);
+    console.log(state);
   };
 
   const handleInput = (e) => {
