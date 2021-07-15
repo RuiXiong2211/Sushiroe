@@ -7,7 +7,7 @@ import GlobalStyle from './globalStyles'
 import Home from './pages/HomePage/Home'
 import Menu from './pages/Menu/Menu'
 import Reservation from './pages/Reservation/ReservationPage'
-import Admin from './pages/AdminDashboard/Dashboard'
+import Admin from './pages/Dashboard/Dashboard'
 
 function App() {
   return (
