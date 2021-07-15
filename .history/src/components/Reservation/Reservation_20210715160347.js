@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
+import axios from "axios";
+
 import {
   Header,
   StyledFormWrapper,
@@ -8,7 +11,6 @@ import {
   StyledButton,
   StyledFieldset,
 } from "./Reservation.elements";
-import { createNewReservation, sendConfirmationEmail } from "../../services/reservations";
 
 const Reservation = () => {
   let initialState = {
@@ -23,13 +25,22 @@ const Reservation = () => {
   const [state, setState] = useState(initialState);
   const [error, setError] = useState("");
 
-  let emailParams = {
-    name: state.name,
-    email: state.email,
-    pax: state.pax,
-    date: state.date,
-    time: state.time,
-  };
+  function sendConfirmationEmail() {
+    let emailParams = {
+      name: state.name,
+      email: state.email,
+      pax: state.pax,
+      date: state.date,
+      time: state.time,
+    };
+    emailjs
+      .send(
+        "service_zzhbm1s",
+        "template_yot0ajf",
+        emailParams,
+        "user_Rb1siOwIIlMA7ruNlgeYh"
+      )
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -41,9 +52,11 @@ const Reservation = () => {
     }
     setError("*We have received your reservation!");
 
-    createNewReservation(state);
+    axios
+      .post("http://localhost:4000/app/reservation", state)
+      .then((response) => console.log(response.data));
 
-    sendConfirmationEmail(emailParams);
+    sendConfirmationEmail();
 
     initialState = {
       name: "",
