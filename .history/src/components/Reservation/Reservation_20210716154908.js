@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Header,
   StyledFormWrapper,
@@ -8,11 +8,7 @@ import {
   StyledButton,
   StyledFieldset,
 } from "./Reservation.elements";
-import {
-  createNewReservation,
-  sendConfirmationEmail,
-  getReservations,
-} from "../../services/reservations";
+import { createNewReservation, sendConfirmationEmail } from "../../services/reservations";
 
 const Reservation = () => {
   let initialState = {
@@ -27,12 +23,6 @@ const Reservation = () => {
   const [state, setState] = useState(initialState);
   const [reservations, setReservations] = useState([]);
   const [error, setError] = useState("");
-
-  useEffect(() => {
-    getReservations().then((initialReservations) =>
-      setReservations(initialReservations)
-    );
-  }, []);
 
   let emailParams = {
     name: state.name,
@@ -52,8 +42,7 @@ const Reservation = () => {
     }
     setError("*We have received your reservation!");
 
-    setReservations([...reservations], state);
-
+    setReservations([...reservations], state)
     createNewReservation(state);
 
     sendConfirmationEmail(emailParams);

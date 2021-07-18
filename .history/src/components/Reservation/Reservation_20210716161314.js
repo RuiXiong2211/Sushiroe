@@ -8,11 +8,7 @@ import {
   StyledButton,
   StyledFieldset,
 } from "./Reservation.elements";
-import {
-  createNewReservation,
-  sendConfirmationEmail,
-  getReservations,
-} from "../../services/reservations";
+import { createNewReservation, sendConfirmationEmail, getReservations } from "../../services/reservations";
 
 const Reservation = () => {
   let initialState = {
@@ -29,10 +25,8 @@ const Reservation = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    getReservations().then((initialReservations) =>
-      setReservations(initialReservations)
-    );
-  }, []);
+    getReservations().then(initialReservations => setReservations(initialReservations));
+  }, [])
 
   let emailParams = {
     name: state.name,
@@ -52,7 +46,7 @@ const Reservation = () => {
     }
     setError("*We have received your reservation!");
 
-    setReservations([...reservations], state);
+    setReservations([...reservations], state)
 
     createNewReservation(state);
 

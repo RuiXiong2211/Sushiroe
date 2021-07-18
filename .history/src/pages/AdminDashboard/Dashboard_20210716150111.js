@@ -4,7 +4,7 @@ import { AdminDashboard } from '../../components'
 const Dashboard = () => {
     return (
         <>
-            <AdminDashboard />
+            < />
         </>
     )
 }

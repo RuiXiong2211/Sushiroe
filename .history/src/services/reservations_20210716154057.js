@@ -19,9 +19,10 @@ export const sendConfirmationEmail = emailParams => {
       )
   }
 
-  export const getReservations = () => {
+  export const getReservations = setReservations => {
     const request = axios.get(baseUrl)
     return request.then(response => {
       console.log(response.data)
+      setReservations(response.data)
     })
   }

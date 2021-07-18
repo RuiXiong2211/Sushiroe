@@ -21,7 +21,5 @@ export const sendConfirmationEmail = emailParams => {
 
   export const getReservations = () => {
     const request = axios.get(baseUrl)
-    return request.then(response => {
-      console.log(response.data)
-    })
+    return request.then(response => response.data)
   }
