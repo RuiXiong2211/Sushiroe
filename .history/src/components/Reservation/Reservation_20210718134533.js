@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import useStore from '../../store'
 import {
   Header,
   StyledFormWrapper,
@@ -11,7 +12,7 @@ import {
 import {
   createNewReservation,
   sendConfirmationEmail,
-  useStore
+  getReservations,
 } from "../../services/reservations";
 
 const Reservation = () => {
@@ -24,15 +25,16 @@ const Reservation = () => {
     time: "",
   };
 
-  const [state, setState] = useState(initialState);
-  const [error, setError] = useState("");
-  const reservations = useStore((state) => state.reservations);
-  const addReservation = useStore((state) => state.addReservation);
-  const getAllReservation = useStore((state) => state.getReservations);
+  const [state, setState] = useState(initialState)
+  const [error, setError] = useState("")
+  const reservations = useStore(state => state.reservations)
+  const addReservation = useStore(state => state.addReservations)
 
   useEffect(() => {
-    getAllReservation()
-  });
+    getReservations().then((initialReservations) =>
+      addReservation(initialReservations)
+    );
+  }, []);
 
   let emailParams = {
     name: state.name,
@@ -69,6 +71,7 @@ const Reservation = () => {
       time: "",
     };
     setState(initialState);
+    console.log(reservations)
   };
 
   const handleInput = (e) => {

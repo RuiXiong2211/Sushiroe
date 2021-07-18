@@ -32,7 +32,7 @@ const Reservation = () => {
 
   useEffect(() => {
     getAllReservation()
-  });
+  }, [getAllReservation]);
 
   let emailParams = {
     name: state.name,

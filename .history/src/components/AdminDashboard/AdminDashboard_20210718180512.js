@@ -10,7 +10,7 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     getAllReservation()
-  });
+  }, [getAllReservation]);
 
   return (
     <>

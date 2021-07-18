@@ -8,9 +8,9 @@ const AdminDashboard = () => {
   const getAllReservation = useStore((state) => state.getReservations);
   const reservations = useStore((state) => state.reservations);
 
-  useEffect(() => {
-    getAllReservation()
-  });
+  // useEffect(() => {
+  //   getAllReservation()
+  // });
 
   return (
     <>

@@ -32,7 +32,7 @@ const Reservation = () => {
 
   useEffect(() => {
     getAllReservation()
-  });
+  }, [getAllReservation]);
 
   let emailParams = {
     name: state.name,
@@ -69,6 +69,7 @@ const Reservation = () => {
       time: "",
     };
     setState(initialState);
+    console.log("reservations:" + JSON.stringify(reservations));
   };
 
   const handleInput = (e) => {

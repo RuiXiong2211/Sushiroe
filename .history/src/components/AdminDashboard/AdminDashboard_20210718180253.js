@@ -6,11 +6,11 @@ import ResvItem from "./ResvItem";
 const AdminDashboard = () => {
 
   const getAllReservation = useStore((state) => state.getReservations);
-  const reservations = useStore((state) => state.reservations);
 
   useEffect(() => {
     getAllReservation()
   });
+  const reservations = useStore((state) => state.reservations);
 
   return (
     <>

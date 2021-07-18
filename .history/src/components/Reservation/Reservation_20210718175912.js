@@ -26,13 +26,12 @@ const Reservation = () => {
 
   const [state, setState] = useState(initialState);
   const [error, setError] = useState("");
-  const reservations = useStore((state) => state.reservations);
   const addReservation = useStore((state) => state.addReservation);
   const getAllReservation = useStore((state) => state.getReservations);
 
   useEffect(() => {
     getAllReservation()
-  });
+  }, []);
 
   let emailParams = {
     name: state.name,

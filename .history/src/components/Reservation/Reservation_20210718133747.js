@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import useStore from '../../store'
 import {
   Header,
   StyledFormWrapper,
@@ -11,7 +12,7 @@ import {
 import {
   createNewReservation,
   sendConfirmationEmail,
-  useStore
+  getReservations,
 } from "../../services/reservations";
 
 const Reservation = () => {
@@ -25,14 +26,14 @@ const Reservation = () => {
   };
 
   const [state, setState] = useState(initialState);
+  const reservations = useStore(state => state.reservations)
   const [error, setError] = useState("");
-  const reservations = useStore((state) => state.reservations);
-  const addReservation = useStore((state) => state.addReservation);
-  const getAllReservation = useStore((state) => state.getReservations);
 
   useEffect(() => {
-    getAllReservation()
-  });
+    getReservations().then((initialReservations) =>
+      setReservations(initialReservations)
+    );
+  }, []);
 
   let emailParams = {
     name: state.name,
@@ -52,11 +53,9 @@ const Reservation = () => {
     }
     setError("*We have received your reservation!");
 
-    // creates a post request to mongodb
-    createNewReservation(state);
+    setReservations([...reservations], state);
 
-    // adds a reservation to the store.
-    addReservation(state);
+    createNewReservation(state);
 
     sendConfirmationEmail(emailParams);
 

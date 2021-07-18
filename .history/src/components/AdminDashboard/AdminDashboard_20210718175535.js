@@ -1,17 +1,12 @@
-import { React, useEffect } from "react";
+import React from "react";
 import { Container } from "../../globalStyles";
 import { useStore } from "../../services/reservations";
 import ResvItem from "./ResvItem";
 
-const AdminDashboard = () => {
+const AdminDashboard = ({ reservations }) => {
 
-  const getAllReservation = useStore((state) => state.getReservations);
-  const reservations = useStore((state) => state.reservations);
-
-  useEffect(() => {
-    getAllReservation()
-  });
-
+  const reservations = useStore(state.reservations)
+  
   return (
     <>
       <Container>
