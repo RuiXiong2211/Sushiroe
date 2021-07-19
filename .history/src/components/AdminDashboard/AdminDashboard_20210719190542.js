@@ -2,7 +2,7 @@ import { React, useEffect } from "react";
 import { useStore } from "../../services/reservations";
 import ResvItem from "./ResvItem";
 import { AdminContainer } from './AdminDashboard.elements'
-import ReservationHeader from "./ReservationHeader";
+import { ResvHeader } from "./ResItem.elements";
 
 const AdminDashboard = () => {
 
@@ -16,7 +16,7 @@ const AdminDashboard = () => {
   return (
     <>
       <AdminContainer>
-        <ReservationHeader/>
+        <ResvHeader/>
         {reservations.map((resv) => {
           return (
             <ResvItem

@@ -1,43 +1,10 @@
 import styled from "styled-components";
 import { RiCloseCircleLine } from "react-icons/ri";
 
-export const HeaderID = styled.p`
-  width: 250px;
-`;
-
-export const HeaderName = styled.p`
-  width: 250px;
-`;
-
-export const HeaderEmail = styled.p`
-  width: 250px;
-`;
-export const HeaderPhone = styled.p`
-  width: 100px;
-`;
-export const HeaderPax = styled.p`
-  width: 100px;
-`;
-export const HeaderDate = styled.p`
-  width: 100px;
-`;
-
-export const HeaderTime = styled.p`
-  width: 100px;
-`;
-
-export const HeaderRow = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  height: 80px;
-  background-color: #242424;
-  border-bottom: 2px solid pink;
-  color: red;
-  width: 1500px;
-`;
-
+export const Header = styled.p`
+  font-size: 1.5rem;
+  width: 200px;
+`
 export const ResvContainer = styled.div`
   display: flex;
   justify-content: center;

@@ -32,7 +32,6 @@ export const HeaderRow = styled.div`
   justify-content: start;
   align-items: center;
   height: 80px;
-  background-color: #242424;
   border-bottom: 2px solid pink;
   color: red;
   width: 1500px;

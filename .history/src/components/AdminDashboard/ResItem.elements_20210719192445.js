@@ -35,7 +35,7 @@ export const HeaderRow = styled.div`
   background-color: #242424;
   border-bottom: 2px solid pink;
   color: red;
-  width: 1500px;
+  width: 1300px;
 `;
 
 export const ResvContainer = styled.div`

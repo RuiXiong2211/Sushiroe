@@ -31,8 +31,7 @@ export const HeaderRow = styled.div`
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  height: 80px;
-  background-color: #242424;
+  height: 50px;
   border-bottom: 2px solid pink;
   color: red;
   width: 1500px;

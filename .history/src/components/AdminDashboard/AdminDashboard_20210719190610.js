@@ -2,7 +2,7 @@ import { React, useEffect } from "react";
 import { useStore } from "../../services/reservations";
 import ResvItem from "./ResvItem";
 import { AdminContainer } from './AdminDashboard.elements'
-import ReservationHeader from "./ReservationHeader";
+import ReservationHeader from "./ResvHeader";
 
 const AdminDashboard = () => {
 

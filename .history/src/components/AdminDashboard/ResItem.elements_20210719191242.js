@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { RiCloseCircleLine } from "react-icons/ri";
 
-export const HeaderID = styled.p`
+export const HeadervId = styled.p`
   width: 250px;
 `;
 
@@ -25,19 +25,6 @@ export const HeaderDate = styled.p`
 export const HeaderTime = styled.p`
   width: 100px;
 `;
-
-export const HeaderRow = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  height: 80px;
-  background-color: #242424;
-  border-bottom: 2px solid pink;
-  color: red;
-  width: 1500px;
-`;
-
 export const ResvContainer = styled.div`
   display: flex;
   justify-content: center;
