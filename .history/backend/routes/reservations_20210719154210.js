@@ -17,7 +17,7 @@ router.post("/reservation", (request, response) => {
     .save()
     .then((data) => {
       response.json(data)
-      console.log("reservation succesfully added to mongodb.")
+      console.log("hello")
     })
     .catch((error) => {
       response.json(error)
@@ -33,18 +33,13 @@ router.get('/reservation', async (request, response) => {
   }
 })
 
-router.get('/reservation/:id', async (request, response) => {
-  const reservation = await ReservationModel.findById(request.params.id)
-  if (reservation) {
-    response.json(reservation.toJSON())
-  } else {
-    response.status(404).end()
-  }
-})
-
 router.delete('/reservation/:id', async (request, response) => {
-  await ReservationModel.findByIdAndRemove(request.params.id)
-  response.status(204).end()
+  try {
+    const reservation = await ReservationModel.findByIdAndRemove(request.param.id)
+    response.json(reservation)
+    } catch (err) {
+      response.json({message : err})
+    }
 })
 
 module.exports = router;

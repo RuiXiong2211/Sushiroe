@@ -34,7 +34,7 @@ router.get('/reservation', async (request, response) => {
 })
 
 router.get('/reservation/:id', async (request, response) => {
-  const reservation = await ReservationModel.findById(request.params.id)
+  const reservation = await ReservationModel.findById(request.params._id)
   if (reservation) {
     response.json(reservation.toJSON())
   } else {
@@ -43,7 +43,7 @@ router.get('/reservation/:id', async (request, response) => {
 })
 
 router.delete('/reservation/:id', async (request, response) => {
-  await ReservationModel.findByIdAndRemove(request.params.id)
+  await ReservationModel.findByIdAndRemove(request.params._id)
   response.status(204).end()
 })
 
