@@ -1,12 +1,13 @@
 import { React, useEffect } from "react";
+import { Container } from "../../globalStyles";
 import { useStore } from "../../services/reservations";
 import ResvItem from "./ResvItem";
-import { AdminContainer } from './AdminDashboard.elements'
 
 const AdminDashboard = () => {
 
   const getAllReservation = useStore((state) => state.getReservations);
   const reservations = useStore((state) => state.reservations);
+  console.log(reservations)
 
   useEffect(() => {
     getAllReservation()
@@ -14,7 +15,7 @@ const AdminDashboard = () => {
 
   return (
     <>
-      <AdminContainer>
+      <Container>
         {reservations.map((resv) => {
           return (
             <ResvItem
@@ -25,11 +26,11 @@ const AdminDashboard = () => {
               phone={resv.phone}
               pax={resv.pax}
               date={resv.date}
-              time={resv.time}
+              time={resv.date}
             />
           );
         })}
-      </AdminContainer>
+      </Container>
     </>
   );
 };

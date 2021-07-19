@@ -56,10 +56,13 @@ export const ResvTime = styled.p`
 `;
 
 export const DeleteButton = styled(RiCloseCircleLine)`
-  font-size: 2rem;
+`;
+
+export const DeleteIcon = styled.div`
+  display: none;
   cursor: pointer;
-  color: #ff8080;
+  color: red;
   &:hover {
-    color: #ff3333;
+    color: pink;
   }
 `;

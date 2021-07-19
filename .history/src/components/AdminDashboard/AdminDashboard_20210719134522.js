@@ -18,8 +18,8 @@ const AdminDashboard = () => {
         {reservations.map((resv) => {
           return (
             <ResvItem
-              key={resv.id}
-              id={resv.id}
+              key={resv._id}
+              id={resv._id}
               name={resv.name}
               email={resv.email}
               phone={resv.phone}

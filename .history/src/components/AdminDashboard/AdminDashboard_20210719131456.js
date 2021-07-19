@@ -1,35 +1,36 @@
 import { React, useEffect } from "react";
-import { useStore } from "../../services/reservations";
+import { Container } from "../../globalStyles";
+import { useStore, getAllReservation } from "../../services/reservations";
 import ResvItem from "./ResvItem";
-import { AdminContainer } from './AdminDashboard.elements'
 
 const AdminDashboard = () => {
 
-  const getAllReservation = useStore((state) => state.getReservations);
+  const getAllReservations = useStore((state) => state.getReservations);
   const reservations = useStore((state) => state.reservations);
+  console.log(reservations)
 
   useEffect(() => {
     getAllReservation()
-  });
+  }, []);
 
   return (
     <>
-      <AdminContainer>
+      <Container>
         {reservations.map((resv) => {
           return (
             <ResvItem
-              key={resv.id}
-              id={resv.id}
+              key={resv._id}
+              id={resv._id}
               name={resv.name}
               email={resv.email}
               phone={resv.phone}
               pax={resv.pax}
               date={resv.date}
-              time={resv.time}
+              time={resv.date}
             />
           );
         })}
-      </AdminContainer>
+      </Container>
     </>
   );
 };

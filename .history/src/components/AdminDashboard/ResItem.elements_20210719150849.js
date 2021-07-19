@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { RiCloseCircleLine } from "react-icons/ri";
+import { RiCloseCircleLine } from 'react-icons/ri'
 
 export const ResvContainer = styled.div`
   display: flex;
@@ -56,10 +56,7 @@ export const ResvTime = styled.p`
 `;
 
 export const DeleteButton = styled(RiCloseCircleLine)`
-  font-size: 2rem;
-  cursor: pointer;
-  color: #ff8080;
   &:hover {
-    color: #ff3333;
-  }
-`;
+        color: red
+    }
+`

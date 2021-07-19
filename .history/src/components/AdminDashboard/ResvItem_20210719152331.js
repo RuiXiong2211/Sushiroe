@@ -1,5 +1,5 @@
 import React from "react";
-import { useStore, deleteReservation } from "../../services/reservations";
+import { RiCloseCircleLine } from 'react-icons/ri'
 import {
   ResvContainer,
   ResvRow,
@@ -16,15 +16,6 @@ import {
 } from "./ResItem.elements";
 
 const ResvItem = ({id, name, email, phone, pax, date, time}) => {
-
-  const removeReservation = useStore((state) => state.removeReservation)
-
-  const handleClickDelete = id => {
-    console.log(id)
-    removeReservation(id)
-    deleteReservation(id)
-  }
-
   return (
     <>
       <ResvContainer>
@@ -38,7 +29,7 @@ const ResvItem = ({id, name, email, phone, pax, date, time}) => {
               <ResvPax>{pax}</ResvPax>
               <ResvDate>{date}</ResvDate>
               <ResvTime>{time}</ResvTime>
-              <DeleteButton onClick= {()=> handleClickDelete(id)}/>
+              <DeleteButton/>
             </ResvData>
           </Resv>
         </ResvRow>

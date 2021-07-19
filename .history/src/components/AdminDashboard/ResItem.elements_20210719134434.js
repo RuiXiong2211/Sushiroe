@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { RiCloseCircleLine } from "react-icons/ri";
 
 export const ResvContainer = styled.div`
   display: flex;
@@ -25,7 +24,7 @@ export const Resv = styled.div`
 
 export const ResvData = styled.div`
   display: flex;
-  text-align: center;
+  text-align: right;
   justify-content: space-between;
   width: 100%;
 `;
@@ -45,7 +44,7 @@ export const ResvPhone = styled.p`
   width: 100px;
 `;
 export const ResvPax = styled.p`
-  width: 100px;
+  width: 50px;
 `;
 export const ResvDate = styled.p`
   width: 100px;
@@ -53,13 +52,4 @@ export const ResvDate = styled.p`
 
 export const ResvTime = styled.p`
   width: 100px;
-`;
-
-export const DeleteButton = styled(RiCloseCircleLine)`
-  font-size: 2rem;
-  cursor: pointer;
-  color: #ff8080;
-  &:hover {
-    color: #ff3333;
-  }
 `;

@@ -16,7 +16,7 @@ export const useStore = create((set) => ({
   removeReservation: (id) => {
     set((state) => ({
       reservations: state.reservations.filter(
-        (reservation) => id !== reservation._id
+        (reservation) => id !== reservation.id
       ),
     }));
   },
@@ -45,5 +45,6 @@ export const getReservations = async () => {
 };
 
 export const deleteReservation = async (id) => {
-  await axios.delete(`${baseUrl}/${id}`);
+  const request = await axios.delete(`${baseUrl}/${id}`);
+  return request;
 };
