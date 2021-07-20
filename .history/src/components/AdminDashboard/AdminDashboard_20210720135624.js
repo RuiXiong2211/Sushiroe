@@ -1,73 +1,54 @@
 import { React, useEffect, useRef } from "react";
-import { unstable_batchedUpdates } from "react-dom";
 import { useStore } from "../../services/reservations";
 import ResvItem from "./ResvItem";
-import { DataGrid } from "@material-ui/data-grid";
+import { DataGrid } from '@material-ui/data-grid';
 import { AdminContainer } from "./AdminDashboard.elements";
-import { getReservations } from "../../services/reservations";
 import ReservationHeader from "./ReservationHeader";
 
 const AdminDashboard = () => {
   const getAllReservation = useStore((state) => state.getReservations);
   const reservations = useStore((state) => state.reservations);
-  const setRev = useStore((state) => state.setRev);
   const reservationsRef = useRef(useStore.getState().reservations);
-
-  useEffect(() => {
-    useStore.subscribe(
-      (reservations) => (reservationsRef.current = reservations),
-      (state) => state.reservations
-    );
-  }, [reservations]);
-
-  useEffect(() => {
-    getAllReservation()
-  }, [])
-
-  console.log(reservations)
 
   const columns = [
     {
-      field: "id",
+      field: "ID",
       headerName: "ID",
-      width: 250,
     },
     {
-      field: "name",
+      field: "Name",
       headerName: "Name",
-      width: 250,
     },
     {
-      field: "email",
-      headerName: "Email",
-      width: 250,
-    },
-    {
-      field: "phone",
+      field: "Phone",
       headerName: "Phone",
-      width: 150,
     },
     {
-      field: "pax",
+      field: "Pax",
       headerName: "Pax",
-      width: 100,
     },
     {
-      field: "date",
+      field: "Date",
       headerName: "Date",
-      width: 100,
     },
     {
-      field: "time",
+      field: "Time",
       headerName: "Time",
-      width: 100,
     },
   ];
+
+  useEffect(() => {
+    useStore.subscribe(
+      getAllReservation(),
+      (reservations) => (reservationsRef.current = reservations),
+      (state) => state.reservations
+    );
+  });
 
   return (
     <>
       <AdminContainer>
-        <DataGrid rows={reservations} columns={columns} pageSize={30} />
+        <DataGrid
       </AdminContainer>
     </>
   );

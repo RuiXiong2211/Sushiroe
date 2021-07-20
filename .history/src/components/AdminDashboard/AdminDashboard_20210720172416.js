@@ -14,17 +14,12 @@ const AdminDashboard = () => {
   const reservationsRef = useRef(useStore.getState().reservations);
 
   useEffect(() => {
+    getAllReservation()
     useStore.subscribe(
       (reservations) => (reservationsRef.current = reservations),
       (state) => state.reservations
     );
   }, [reservations]);
-
-  useEffect(() => {
-    getAllReservation()
-  }, [])
-
-  console.log(reservations)
 
   const columns = [
     {

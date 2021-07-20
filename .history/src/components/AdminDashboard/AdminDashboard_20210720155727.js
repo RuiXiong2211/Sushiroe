@@ -1,31 +1,32 @@
 import { React, useEffect, useRef } from "react";
-import { unstable_batchedUpdates } from "react-dom";
+import { unstable_batchedUpdates } from 'react-dom' 
 import { useStore } from "../../services/reservations";
 import ResvItem from "./ResvItem";
-import { DataGrid } from "@material-ui/data-grid";
+import { DataGrid } from '@material-ui/data-grid';
 import { AdminContainer } from "./AdminDashboard.elements";
-import { getReservations } from "../../services/reservations";
 import ReservationHeader from "./ReservationHeader";
 
 const AdminDashboard = () => {
   const getAllReservation = useStore((state) => state.getReservations);
   const reservations = useStore((state) => state.reservations);
-  const setRev = useStore((state) => state.setRev);
   const reservationsRef = useRef(useStore.getState().reservations);
 
-  useEffect(() => {
-    useStore.subscribe(
-      (reservations) => (reservationsRef.current = reservations),
-      (state) => state.reservations
-    );
-  }, [reservations]);
+
+  const nonReactCallback = () => {
+    unstable_batchedUpdates(() => {
+      useStore.getState().getReservations()
+    })
+  }
 
   useEffect(() => {
-    getAllReservation()
-  }, [])
+      useStore.subscribe(
+        nonReactCallback(),
+     (reservations) => (reservationsRef.current = reservations),
+     (state) => state.reservations)
+  }, []);
+
 
   console.log(reservations)
-
   const columns = [
     {
       field: "id",
@@ -67,7 +68,7 @@ const AdminDashboard = () => {
   return (
     <>
       <AdminContainer>
-        <DataGrid rows={reservations} columns={columns} pageSize={30} />
+        <DataGrid rows={reservations} columns={columns} pageSize={10}/>
       </AdminContainer>
     </>
   );

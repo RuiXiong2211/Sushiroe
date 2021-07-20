@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const AdminContainer = styled.div`
-    display: flex;
+    display:flex;
     z-index: 1;
     width: 100%;
     max-width: 1300px;

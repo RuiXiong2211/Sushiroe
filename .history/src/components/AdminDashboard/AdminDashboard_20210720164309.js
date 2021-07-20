@@ -1,10 +1,10 @@
 import { React, useEffect, useRef } from "react";
 import { unstable_batchedUpdates } from "react-dom";
 import { useStore } from "../../services/reservations";
+import axios from "axios";
 import ResvItem from "./ResvItem";
 import { DataGrid } from "@material-ui/data-grid";
 import { AdminContainer } from "./AdminDashboard.elements";
-import { getReservations } from "../../services/reservations";
 import ReservationHeader from "./ReservationHeader";
 
 const AdminDashboard = () => {
@@ -18,14 +18,9 @@ const AdminDashboard = () => {
       (reservations) => (reservationsRef.current = reservations),
       (state) => state.reservations
     );
-  }, [reservations]);
+  }, []);
 
-  useEffect(() => {
-    getAllReservation()
-  }, [])
-
-  console.log(reservations)
-
+  console.log(reservations);
   const columns = [
     {
       field: "id",

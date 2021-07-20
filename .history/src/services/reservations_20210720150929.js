@@ -10,12 +10,6 @@ export const useStore = create((set) => ({
     const response = await axios.get(baseUrl);
     set({ reservations: response.data });
   },
-  setRev: (reservations) => {
-    set((state) => ({
-      ...state,
-      reservations,
-    }));
-  },
   addReservation: (reservation) => {
     set((state) => ({ reservations: [...state.reservations, reservation] }));
   },
@@ -45,16 +39,11 @@ export const sendConfirmationEmail = (emailParams) => {
 
 export const getReservations = async () => {
   const request = await axios.get(baseUrl);
-  return request;
+  return request.then((response) => {
+    console.log(response.data);
+  });
 };
 
 export const deleteReservation = async (id) => {
   await axios.delete(`${baseUrl}/${id}`);
 };
-
-getReservations().then((reservation) =>
-  useStore.setState((state) => ({
-    ...state,
-    reservation,
-  }))
-);

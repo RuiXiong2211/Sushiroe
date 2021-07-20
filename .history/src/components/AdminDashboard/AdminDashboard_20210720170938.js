@@ -12,18 +12,26 @@ const AdminDashboard = () => {
   const reservations = useStore((state) => state.reservations);
   const setRev = useStore((state) => state.setRev);
   const reservationsRef = useRef(useStore.getState().reservations);
+  
+  // useEffect(() => {
+  //   useStore.subscribe(
+  //     (reservations) => (reservationsRef.current = reservations),
+  //     (state) => state.reservations
+  //   );
+  // }, []);
 
-  useEffect(() => {
-    useStore.subscribe(
-      (reservations) => (reservationsRef.current = reservations),
-      (state) => state.reservations
+  console.log(reservations);
+
+  fetch("http://localhost:4000/app/reservation")
+    .then((resp) => {
+      console.log(resp.json())
+    })
+    .then((pokemon) =>
+      useStore.setState((state) => ({
+        ...state,
+        pokemon,
+      }))
     );
-  }, [reservations]);
-
-  useEffect(() => {
-    getAllReservation()
-  }, [])
-
   console.log(reservations)
 
   const columns = [

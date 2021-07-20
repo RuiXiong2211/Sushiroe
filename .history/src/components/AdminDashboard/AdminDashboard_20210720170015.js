@@ -13,19 +13,16 @@ const AdminDashboard = () => {
   const setRev = useStore((state) => state.setRev);
   const reservationsRef = useRef(useStore.getState().reservations);
 
-  useEffect(() => {
-    useStore.subscribe(
-      (reservations) => (reservationsRef.current = reservations),
-      (state) => state.reservations
-    );
-  }, [reservations]);
+  getReservations().then((reservation) => setRev(reservation));
 
-  useEffect(() => {
-    getAllReservation()
-  }, [])
+  // useEffect(() => {
+  //   useStore.subscribe(
+  //     (reservations) => (reservationsRef.current = reservations),
+  //     (state) => state.reservations
+  //   );
+  // }, []);
 
-  console.log(reservations)
-
+  console.log(reservations);
   const columns = [
     {
       field: "id",

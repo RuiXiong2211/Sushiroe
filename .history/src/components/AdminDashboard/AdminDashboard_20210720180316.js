@@ -22,7 +22,7 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     getAllReservation()
-  }, [])
+  })
 
   console.log(reservations)
 

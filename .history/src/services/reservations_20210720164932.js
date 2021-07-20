@@ -45,16 +45,20 @@ export const sendConfirmationEmail = (emailParams) => {
 
 export const getReservations = async () => {
   const request = await axios.get(baseUrl);
-  return request;
+  return request.then((response) => {
+    console.log(response.data);
+  });
 };
 
 export const deleteReservation = async (id) => {
   await axios.delete(`${baseUrl}/${id}`);
 };
 
-getReservations().then((reservation) =>
-  useStore.setState((state) => ({
-    ...state,
-    reservation,
-  }))
+getReservations().then(
+  ((response) => response.json()).then((reservation) =>
+    useStore.setState((state) => ({
+      ...state,
+      reservation,
+    }))
+  )
 );

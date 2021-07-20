@@ -24,8 +24,6 @@ const AdminDashboard = () => {
     getAllReservation()
   }, [])
 
-  console.log(reservations)
-
   const columns = [
     {
       field: "id",
