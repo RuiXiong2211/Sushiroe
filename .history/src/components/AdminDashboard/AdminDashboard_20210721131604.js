@@ -1,48 +1,33 @@
 import { React, useEffect, useState, useRef } from "react";
-import { useStore, deleteReservation } from "../../services/reservations";
+import { unstable_batchedUpdates } from "react-dom";
+import { useStore } from "../../services/reservations";
 import ResvItem from "./ResvItem";
 import { DataGrid } from "@material-ui/data-grid";
-import { AdminContainer, DeleteButton } from "./AdminDashboard.elements";
+import { AdminContainer } from "./AdminDashboard.elements";
 import { getReservations } from "../../services/reservations";
 import ReservationHeader from "./ReservationHeader";
 
 const AdminDashboard = () => {
+
   const getAllReservation = useStore((state) => state.getReservations);
   const reservations = useStore((state) => state.reservations);
   const setRev = useStore((state) => state.setRev);
   const reservationsRef = useRef(useStore.getState().reservations);
-  const removeReservation = useStore((state) => state.removeReservation);
 
-  const [selectedRows, setSelected] = useState([]);
-
-  const unsub = useStore.subscribe(console.log, state => state.reservations)
-  unsub()
+  const store = useStore()
+  
+  //local state
+  const [localRev, setRevs] = useState([])
 
   useEffect(() => {
     getAllReservation();
-    // return useStore.subscribe(
-    //   (reservations) => (reservationsRef.current = reservations),
-    //   (state) => state.reservations
-    // );
-  }, [getAllReservation]);
-
-  // useEffect(() => {
-  //   getAllReservation();
-  //   return useStore.subscribe(
-  //     (reservations) => (reservationsRef.current = reservations),
-  //     (state) => state.reservations
-  //   );
-  // }, [getAllReservation]);
-
-  // useEffect(() => {
-  //   getAllReservation();
-  // }, []);
+  }, []);
 
   // useEffect(() => {
   //   setRevs(getAllReservation)
   // }, [])
 
-  console.log(reservations);
+  // console.log("locaRev " + localRev);
 
   const columns = [
     {
@@ -82,41 +67,13 @@ const AdminDashboard = () => {
     },
   ];
 
-  const handleDelete = (selectedRows) => {
-    console.log(selectedRows);
-    for (let i = 0; i < selectedRows.length; i++) {
-      removeReservation(selectedRows[i]);
-      deleteReservation(selectedRows[i]);
-    }
-  };
-
-  const handleSelectionChange = (selection) => {
-    setSelected(selection.selectionModel);
-  };
-
   return (
     <>
-      <DeleteButton
-        onClick={() => {
-          handleDelete(selectedRows);
-        }}
-      >
-        delete
-      </DeleteButton>
       <AdminContainer>
-        <DataGrid
-          rows={reservations}
-          columns={columns}
-          pageSize={15}
-          checkboxSelection={true}
-          onSelectionModelChange={handleSelectionChange}
-        />
+        <DataGrid rows={reservations} columns={columns} pageSize={30} />
       </AdminContainer>
     </>
   );
-
-
-  // version which uses hard code to create a table.
   // return (
   //   <>
   //     <AdminContainer>

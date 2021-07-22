@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Button from "@material-ui/core/Button";
+import { Button } from "@material-ui/core";
 
 export const AdminContainer = styled.div`
   display: flex;
@@ -19,12 +19,7 @@ export const AdminContainer = styled.div`
 `;
 
 export const DeleteButton = styled(Button)`
-  && {
-    background-color: red;
-    border-radius: 0px;
-    color: white;
-    &:hover{
-        background-color: crimson;
-    }
-  }
+  color: white;
+  background-color: blue;
+  height: 80px;
 `;

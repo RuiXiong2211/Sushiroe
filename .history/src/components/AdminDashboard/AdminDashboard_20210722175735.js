@@ -114,9 +114,6 @@ const AdminDashboard = () => {
       </AdminContainer>
     </>
   );
-
-
-  // version which uses hard code to create a table.
   // return (
   //   <>
   //     <AdminContainer>

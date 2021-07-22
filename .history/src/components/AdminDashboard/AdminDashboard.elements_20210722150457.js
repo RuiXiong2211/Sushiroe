@@ -21,10 +21,7 @@ export const AdminContainer = styled.div`
 export const DeleteButton = styled(Button)`
   && {
     background-color: red;
-    border-radius: 0px;
+    border-radius: 10px;
     color: white;
-    &:hover{
-        background-color: crimson;
-    }
   }
 `;

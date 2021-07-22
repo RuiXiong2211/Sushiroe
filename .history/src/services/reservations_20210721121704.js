@@ -6,9 +6,11 @@ const baseUrl = "http://localhost:4000/app/reservation";
 
 export const useStore = create((set) => ({
   reservations: [],
-  getReservations: async () => {
-    const response = await axios.get(baseUrl);
-    set({ reservations: await response.data });
+  getReservations: () => {
+    const response =  axios.get(baseUrl);
+    //set({ reservations: response.data });
+    console.log(response.data)
+    return response.data()
   },
   setRev: (reservations) => {
     set((state) => ({

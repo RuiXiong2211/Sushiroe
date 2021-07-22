@@ -15,15 +15,12 @@ const AdminDashboard = () => {
 
   const [selectedRows, setSelected] = useState([]);
 
-  const unsub = useStore.subscribe(console.log, state => state.reservations)
-  unsub()
-
   useEffect(() => {
     getAllReservation();
-    // return useStore.subscribe(
-    //   (reservations) => (reservationsRef.current = reservations),
-    //   (state) => state.reservations
-    // );
+    return useStore.subscribe(
+      (reservations) => (reservationsRef.current = reservations),
+      (state) => state.reservations
+    );
   }, [getAllReservation]);
 
   // useEffect(() => {
@@ -83,11 +80,10 @@ const AdminDashboard = () => {
   ];
 
   const handleDelete = (selectedRows) => {
-    console.log(selectedRows);
-    for (let i = 0; i < selectedRows.length; i++) {
-      removeReservation(selectedRows[i]);
-      deleteReservation(selectedRows[i]);
-    }
+    selectedRows.map((id) => {
+      removeReservation(id);
+      deleteReservation(id);
+    });
   };
 
   const handleSelectionChange = (selection) => {
@@ -96,13 +92,7 @@ const AdminDashboard = () => {
 
   return (
     <>
-      <DeleteButton
-        onClick={() => {
-          handleDelete(selectedRows);
-        }}
-      >
-        delete
-      </DeleteButton>
+      <DeleteButton onClick={handleDelete}>delete</DeleteButton>
       <AdminContainer>
         <DataGrid
           rows={reservations}
@@ -114,9 +104,6 @@ const AdminDashboard = () => {
       </AdminContainer>
     </>
   );
-
-
-  // version which uses hard code to create a table.
   // return (
   //   <>
   //     <AdminContainer>

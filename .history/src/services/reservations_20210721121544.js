@@ -8,7 +8,9 @@ export const useStore = create((set) => ({
   reservations: [],
   getReservations: async () => {
     const response = await axios.get(baseUrl);
-    set({ reservations: await response.data });
+    //set({ reservations: response.data });
+    console.log(response.data)
+    return await response.data()
   },
   setRev: (reservations) => {
     set((state) => ({

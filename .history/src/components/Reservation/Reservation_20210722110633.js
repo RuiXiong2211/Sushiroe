@@ -27,8 +27,18 @@ const Reservation = () => {
   const [state, setState] = useState(initialState);
   const [error, setError] = useState("");
   const addReservation = useStore((state) => state.addReservation);
-  //const getAllReservation = useStore((state) => state.getReservations);
-  //const reservations = useStore((state) => state.reservations);
+  const getAllReservation = useStore((state) => state.getReservations);
+  const reservations = useStore((state) => state.reservations);
+  const reservationsRef = useRef(useStore.getState().reservations);
+
+  useEffect(() => {
+    getAllReservation();
+    return useStore.subscribe(
+      (reservations) => (reservationsRef.current = reservations),
+      (state) => state.reservations
+    );
+  }, [getAllReservation]);
+
   
   let emailParams = {
     name: state.name,

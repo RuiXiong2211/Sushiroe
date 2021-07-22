@@ -15,15 +15,12 @@ const AdminDashboard = () => {
 
   const [selectedRows, setSelected] = useState([]);
 
-  const unsub = useStore.subscribe(console.log, state => state.reservations)
-  unsub()
-
   useEffect(() => {
     getAllReservation();
-    // return useStore.subscribe(
-    //   (reservations) => (reservationsRef.current = reservations),
-    //   (state) => state.reservations
-    // );
+    return useStore.subscribe(
+      (reservations) => (reservationsRef.current = reservations),
+      (state) => state.reservations
+    );
   }, [getAllReservation]);
 
   // useEffect(() => {
@@ -114,9 +111,6 @@ const AdminDashboard = () => {
       </AdminContainer>
     </>
   );
-
-
-  // version which uses hard code to create a table.
   // return (
   //   <>
   //     <AdminContainer>
