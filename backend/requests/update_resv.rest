@@ -1,0 +1,6 @@
+PATCH http://localhost:4000/app/reservation/60f7ac089cac9d0a94214fe4
+Content-Type: application/json
+
+{
+"name":"bobo"
+}
