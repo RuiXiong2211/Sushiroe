@@ -14,7 +14,7 @@ import {
   useStore
 } from "../../services/reservations";
 
-const Reservation = (reservations) => {
+const Reservation = () => {
   let initialState = {
     id: "",
     name: "",
@@ -28,15 +28,15 @@ const Reservation = (reservations) => {
   const [state, setState] = useState(initialState);
   const [error, setError] = useState("");
   const addReservation = useStore((state) => state.addReservation);
-  //const getAllReservation = useStore((state) => state.getReservations);
-  //const reservations = useStore((state) => state.reservations);
-
-  // useEffect(() => {
-  //   getAllReservation();
-  // }, [getAllReservation]);
+  const getAllReservation = useStore((state) => state.getReservations);
+  const reservations = useStore((state) => state.reservations);
+  
+  useEffect(() => {
+    getAllReservation();
+  }, [getAllReservation]);
 
   useEffect(() => {
-    console.log(reservations.reservations.reservations)
+    console.log(reservations)
   }, [reservations]);
 
   let emailParams = {
@@ -47,17 +47,10 @@ const Reservation = (reservations) => {
     time: state.time,
   };
 
-  async function getId() {
-    const id = await createNewReservation(state)
-    initialState.id = id
-    setState(initialState)
-    addReservation(state);
-  }
-
   const handleSubmit = (e) => {
     e.preventDefault();
     for (let key in state) {
-      if (key !== "id" && state[key] === "") {
+      if (state[key] === "") {
         setError(`*You must provide the ${key} details.`);
         return;
       }
@@ -65,17 +58,14 @@ const Reservation = (reservations) => {
     setError("*We have received your reservation!");
 
     // creates a post request to mongodb to store the new reservation and return reservation ID
-    // createNewReservation(state).then(value => {
-    //   initialState.id = value
-    // })
-    // console.log(initialState.id)
-    // setState(initialState)
-    // console.log(state)
-    // adds a reservation to the store (local storage).
-    // addReservation(state);
+    const id = createNewReservation(state);
+    console.log(id)
 
-    getId()
-    console.log(reservations.reservations.reservations)
+    initialState.id = id
+    setState(initialState)
+    // adds a reservation to the store (local storage).
+    addReservation(state);
+    console.log(reservations)
 
     sendConfirmationEmail(emailParams);
 
@@ -143,7 +133,7 @@ const Reservation = (reservations) => {
           <StyledInput
             type="number"
             name="pax"
-            min="1"
+            min="0"
             max="5"
             value={state.pax}
             onChange={handleInput}

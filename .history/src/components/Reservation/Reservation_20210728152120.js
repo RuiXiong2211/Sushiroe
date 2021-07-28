@@ -13,8 +13,9 @@ import {
   sendConfirmationEmail,
   useStore
 } from "../../services/reservations";
+import { getIdFromRowElem } from "@material-ui/data-grid";
 
-const Reservation = (reservations) => {
+const Reservation = () => {
   let initialState = {
     id: "",
     name: "",
@@ -28,15 +29,15 @@ const Reservation = (reservations) => {
   const [state, setState] = useState(initialState);
   const [error, setError] = useState("");
   const addReservation = useStore((state) => state.addReservation);
-  //const getAllReservation = useStore((state) => state.getReservations);
-  //const reservations = useStore((state) => state.reservations);
-
-  // useEffect(() => {
-  //   getAllReservation();
-  // }, [getAllReservation]);
+  const getAllReservation = useStore((state) => state.getReservations);
+  const reservations = useStore((state) => state.reservations);
 
   useEffect(() => {
-    console.log(reservations.reservations.reservations)
+    getAllReservation();
+  }, [getAllReservation]);
+
+  useEffect(() => {
+    console.log(reservations)
   }, [reservations]);
 
   let emailParams = {
@@ -46,13 +47,6 @@ const Reservation = (reservations) => {
     date: state.date,
     time: state.time,
   };
-
-  async function getId() {
-    const id = await createNewReservation(state)
-    initialState.id = id
-    setState(initialState)
-    addReservation(state);
-  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -65,17 +59,13 @@ const Reservation = (reservations) => {
     setError("*We have received your reservation!");
 
     // creates a post request to mongodb to store the new reservation and return reservation ID
-    // createNewReservation(state).then(value => {
-    //   initialState.id = value
-    // })
-    // console.log(initialState.id)
-    // setState(initialState)
-    // console.log(state)
+    initialState.id = createNewReservation(state).then(value => console.log(value))
+    console.log(initialState.id)
+    setState(initialState)
+    console.log(state)
     // adds a reservation to the store (local storage).
-    // addReservation(state);
-
-    getId()
-    console.log(reservations.reservations.reservations)
+    addReservation(state);
+    console.log(reservations)
 
     sendConfirmationEmail(emailParams);
 

@@ -75,7 +75,7 @@ const Reservation = (reservations) => {
     // addReservation(state);
 
     getId()
-    console.log(reservations.reservations.reservations)
+    console.log(reservations)
 
     sendConfirmationEmail(emailParams);
 

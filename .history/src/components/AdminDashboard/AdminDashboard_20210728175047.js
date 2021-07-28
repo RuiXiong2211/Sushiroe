@@ -109,7 +109,7 @@ const AdminDashboard = (reservations) => {
       ) : null}
       <AdminContainer>
         <DataGrid
-          rows={reservations.reservations.reservations}
+          rows={reservations}
           columns={columns}
           pageSize={15}
           checkboxSelection={true}

@@ -18,10 +18,6 @@ function App() {
     getAllReservation();
   }, [getAllReservation]);
 
-  useEffect(() => {
-    console.log(reservations);
-  }, [reservations]);
-
   return (
     <Router>
       <GlobalStyle />
@@ -31,7 +27,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/Menu" exact component={Menu} />
         <Route path="/Reservation" render={(props) => <Reservation {...props} reservations={reservations} />} />
-        <Route path="/Admin" render={(props) => <Admin {...props} reservations={reservations} />} />
+        <Route path="/Admin" exact component={Admin} />
       </Switch>
       <Footer />
     </Router>

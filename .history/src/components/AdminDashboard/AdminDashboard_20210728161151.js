@@ -14,10 +14,10 @@ import { getReservations } from "../../services/reservations";
 import ReservationHeader from "./ReservationHeader";
 import ActionResponse from "./ActionResponse";
 
-const AdminDashboard = (reservations) => {
-  //const getAllReservation = useStore((state) => state.getReservations);
-  //const reservations = useStore((state) => state.reservations);
-  //const reservationsRef = useRef(useStore.getState().reservations);
+const AdminDashboard = () => {
+  const getAllReservation = useStore((state) => state.getReservations);
+  const reservations = useStore((state) => state.reservations);
+  const reservationsRef = useRef(useStore.getState().reservations);
   const removeReservation = useStore((state) => state.removeReservation);
 
   // popup for edit form
@@ -35,13 +35,13 @@ const AdminDashboard = (reservations) => {
     console.log(reservations);
   }, [reservations]);
 
-  // useEffect(() => {
-  //   getAllReservation();
-  //   return useStore.subscribe(
-  //     (reservations) => (reservationsRef.current = reservations),
-  //     (state) => state.reservations
-  //   );
-  // }, [getAllReservation]);
+  useEffect(() => {
+    getAllReservation();
+    return useStore.subscribe(
+      (reservations) => (reservationsRef.current = reservations),
+      (state) => state.reservations
+    );
+  }, [getAllReservation]);
 
   useEffect(() => {
     console.log(selectedRows);
@@ -100,7 +100,7 @@ const AdminDashboard = (reservations) => {
           showModal={showModal}
           setShowModal={setShowModal}
           selectedRow={selectedRows}
-          reservations={reservations.reservations.reservations}
+          reservations={reservations}
           open={open}
           setOpen={setOpen}
           response={response}
@@ -109,7 +109,7 @@ const AdminDashboard = (reservations) => {
       ) : null}
       <AdminContainer>
         <DataGrid
-          rows={reservations.reservations.reservations}
+          rows={reservations}
           columns={columns}
           pageSize={15}
           checkboxSelection={true}

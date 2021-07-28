@@ -100,7 +100,7 @@ const AdminDashboard = (reservations) => {
           showModal={showModal}
           setShowModal={setShowModal}
           selectedRow={selectedRows}
-          reservations={reservations.reservations.reservations}
+          reservations={reservations}
           open={open}
           setOpen={setOpen}
           response={response}
@@ -109,7 +109,7 @@ const AdminDashboard = (reservations) => {
       ) : null}
       <AdminContainer>
         <DataGrid
-          rows={reservations.reservations.reservations}
+          rows={reservations}
           columns={columns}
           pageSize={15}
           checkboxSelection={true}

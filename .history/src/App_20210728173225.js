@@ -8,7 +8,7 @@ import Home from "./pages/HomePage/Home";
 import Menu from "./pages/Menu/Menu";
 import Reservation from "./pages/Reservation/ReservationPage";
 import Admin from "./pages/AdminDashboard/Dashboard";
-import { useStore } from "./services/reservations";
+import { useStore } from "../services/reservations";
 
 function App() {
   const getAllReservation = useStore((state) => state.getReservations);
@@ -17,10 +17,6 @@ function App() {
   useEffect(() => {
     getAllReservation();
   }, [getAllReservation]);
-
-  useEffect(() => {
-    console.log(reservations);
-  }, [reservations]);
 
   return (
     <Router>
@@ -31,7 +27,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/Menu" exact component={Menu} />
         <Route path="/Reservation" render={(props) => <Reservation {...props} reservations={reservations} />} />
-        <Route path="/Admin" render={(props) => <Admin {...props} reservations={reservations} />} />
+        <Route path="/Admin" exact component={Admin} />
       </Switch>
       <Footer />
     </Router>

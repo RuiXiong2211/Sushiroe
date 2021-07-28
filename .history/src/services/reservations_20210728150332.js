@@ -39,6 +39,7 @@ export const useStore = create((set) => ({
 
 export const createNewReservation = async (reservation) => {
   const response = await axios.post(baseUrl, reservation);
+  console.log(response.data.id)
   return await response.data.id;
 };
 

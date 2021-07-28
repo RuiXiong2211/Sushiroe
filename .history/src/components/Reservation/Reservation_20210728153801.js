@@ -13,8 +13,9 @@ import {
   sendConfirmationEmail,
   useStore
 } from "../../services/reservations";
+import { getIdFromRowElem } from "@material-ui/data-grid";
 
-const Reservation = (reservations) => {
+const Reservation = () => {
   let initialState = {
     id: "",
     name: "",
@@ -28,15 +29,15 @@ const Reservation = (reservations) => {
   const [state, setState] = useState(initialState);
   const [error, setError] = useState("");
   const addReservation = useStore((state) => state.addReservation);
-  //const getAllReservation = useStore((state) => state.getReservations);
-  //const reservations = useStore((state) => state.reservations);
-
-  // useEffect(() => {
-  //   getAllReservation();
-  // }, [getAllReservation]);
+  const getAllReservation = useStore((state) => state.getReservations);
+  const reservations = useStore((state) => state.reservations);
 
   useEffect(() => {
-    console.log(reservations.reservations.reservations)
+    getAllReservation();
+  }, [getAllReservation]);
+
+  useEffect(() => {
+    console.log(reservations)
   }, [reservations]);
 
   let emailParams = {
@@ -48,8 +49,7 @@ const Reservation = (reservations) => {
   };
 
   async function getId() {
-    const id = await createNewReservation(state)
-    initialState.id = id
+    const Id = await createNewReservation(state)
     setState(initialState)
     addReservation(state);
   }
@@ -75,7 +75,7 @@ const Reservation = (reservations) => {
     // addReservation(state);
 
     getId()
-    console.log(reservations.reservations.reservations)
+    console.log(reservations)
 
     sendConfirmationEmail(emailParams);
 

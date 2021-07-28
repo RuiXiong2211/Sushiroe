@@ -36,7 +36,7 @@ const Reservation = (reservations) => {
   // }, [getAllReservation]);
 
   useEffect(() => {
-    console.log(reservations.reservations.reservations)
+    console.log(reservations.reservations)
   }, [reservations]);
 
   let emailParams = {
@@ -75,7 +75,7 @@ const Reservation = (reservations) => {
     // addReservation(state);
 
     getId()
-    console.log(reservations.reservations.reservations)
+    console.log(reservations)
 
     sendConfirmationEmail(emailParams);
 

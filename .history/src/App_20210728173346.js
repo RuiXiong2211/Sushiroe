@@ -18,10 +18,6 @@ function App() {
     getAllReservation();
   }, [getAllReservation]);
 
-  useEffect(() => {
-    console.log(reservations);
-  }, [reservations]);
-
   return (
     <Router>
       <GlobalStyle />
