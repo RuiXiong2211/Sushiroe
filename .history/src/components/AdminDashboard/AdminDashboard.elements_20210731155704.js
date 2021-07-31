@@ -51,7 +51,7 @@ export const ButtonContainer = styled.div`
   @media screen and (max-width: 991px) {
     margin-bottom: 10px;
   }
-`;
+`
 export const AdminContainer = styled.div`
   display: flex;
   z-index: 1;
@@ -77,13 +77,12 @@ export const DeleteButton = styled(Button)`
     font-weight: bold;
     padding: 5px;
     margin: 10px;
-    background-color: red;
+    background-color: none;
     border: 2px solid red;
     border-radius: 30px;
     color: #fff;
-    &:hover {
-      transform: scale(1.15); 
-      background-color: red;
+    &:hover{
+        background-color: crimson;
     }
   }
 `;
@@ -98,9 +97,8 @@ export const EditButton = styled(Button)`
     background-color: olive;
     border-radius: 30px;
     color: #fff;
-    &:hover {
-      transform: scale(1.15) perspective(1px);
-      background-color: olive;
+    &:hover{
+        background-color: #3A5311;
     }
   }
 `;

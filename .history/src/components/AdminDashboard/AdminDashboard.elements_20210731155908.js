@@ -82,8 +82,7 @@ export const DeleteButton = styled(Button)`
     border-radius: 30px;
     color: #fff;
     &:hover {
-      transform: scale(1.15); 
-      background-color: red;
+      transform: scale(1.1) perspective(1px); 
     }
   }
 `;
@@ -99,8 +98,7 @@ export const EditButton = styled(Button)`
     border-radius: 30px;
     color: #fff;
     &:hover {
-      transform: scale(1.15) perspective(1px);
-      background-color: olive;
+      transform: scale(1.1) perspective(1px);
     }
   }
 `;

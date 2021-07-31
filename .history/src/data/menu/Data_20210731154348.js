@@ -2,7 +2,7 @@ import donburi from '../../images/imageslider/donburi.jpg'
 import sashimi from '../../images/imageslider/sashimi.jpg'
 import sushi from '../../images/imageslider/sushi.jpg'
 import wasabi from '../../images/imageslider/wasabi.png'
-import tea from '../../images/imageslider/matcha.jpg'
+import tea from '../../images/imageslider/matcha.jpeg'
 
 import product1 from '../../images/menu/premium-bowl.jpg'
 import product2 from '../../images/menu/pokebowl.jpg'

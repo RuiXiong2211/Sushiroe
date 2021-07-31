@@ -1,8 +1,8 @@
 import donburi from '../../images/imageslider/donburi.jpg'
-import sashimi from '../../images/imageslider/sashimi.jpg'
+import sashimi from '../../images/imageslider/sashimi.jpeg'
 import sushi from '../../images/imageslider/sushi.jpg'
-import wasabi from '../../images/imageslider/wasabi.png'
-import tea from '../../images/imageslider/matcha.jpg'
+import wasabi from '../../images/imageslider/wasabi.jpeg'
+import tea from '../../images/imageslider/matcha.jpeg'
 
 import product1 from '../../images/menu/premium-bowl.jpg'
 import product2 from '../../images/menu/pokebowl.jpg'
@@ -41,7 +41,7 @@ export const sliderData = [
         img: wasabi,
         alt: 'wasabi',
         header: 'Wasabi',
-        desc: 'We source our wasabi from the mountains of Shizuoka Prefecture.',
+        desc: 'We source our wasabi that are grown naturally from the mountains of Shizuoka Prefecture.',
     },
     {
         img: tea,
