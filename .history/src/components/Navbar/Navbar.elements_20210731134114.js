@@ -73,7 +73,7 @@ export const NavMenu = styled.ul`
     left: ${({ click }) => (click ? 0 : "-100%")};
     opacity: 1;
     transition: all 0.5s ease;
-    background: #101522;
+    background: #F7665A;;
   }
 `;
 
@@ -107,11 +107,6 @@ export const NavLinks = styled(NavLink)`
     color: #F7665A;
     font-weight: bold;
   }
-
-  &:hover {
-      color: #F7665A;
-      transition: all 0.1s ease;
-    }
 
   @media screen and (max-width: 960px) {
     text-align: center;

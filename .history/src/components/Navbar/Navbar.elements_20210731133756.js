@@ -108,11 +108,6 @@ export const NavLinks = styled(NavLink)`
     font-weight: bold;
   }
 
-  &:hover {
-      color: #F7665A;
-      transition: all 0.1s ease;
-    }
-
   @media screen and (max-width: 960px) {
     text-align: center;
     padding: 2rem;

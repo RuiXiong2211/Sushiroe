@@ -82,8 +82,7 @@ export const NavItem = styled.li`
   border-bottom: 2px solid transparent;
 
   &:hover {
-    border-bottom: 2px solid;
-    border-bottom-color: #F7665A;
+    border-bottom: 2px solid yellow;
   }
 
   @media screen and (max-width: 960px) {
@@ -104,14 +103,8 @@ export const NavLinks = styled(NavLink)`
   height: 100%;
 
   &.${(props) => props.activeClassName} {
-    color: #F7665A;
-    font-weight: bold;
+    color: #4b59f7;
   }
-
-  &:hover {
-      color: #F7665A;
-      transition: all 0.1s ease;
-    }
 
   @media screen and (max-width: 960px) {
     text-align: center;
@@ -120,7 +113,7 @@ export const NavLinks = styled(NavLink)`
     display: table;
 
     &:hover {
-      color: #F7665A;
+      color: #4b59f7;
       transition: all 0.3s ease;
     }
   }

@@ -5,7 +5,7 @@ import { FaTimes, FaBars } from "react-icons/fa";
 import { GiJapan } from "react-icons/gi";
 
 export const Nav = styled.nav`
-  background: #150f0f;
+  background: pink;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -107,11 +107,6 @@ export const NavLinks = styled(NavLink)`
     color: #F7665A;
     font-weight: bold;
   }
-
-  &:hover {
-      color: #F7665A;
-      transition: all 0.1s ease;
-    }
 
   @media screen and (max-width: 960px) {
     text-align: center;

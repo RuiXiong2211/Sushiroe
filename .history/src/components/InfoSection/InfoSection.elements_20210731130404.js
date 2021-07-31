@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const InfoSec = styled.div`
-    height: 95vh;
+    height: 90vh;
     color: #fff;
     padding: 160px 0;
     background: ${({lightBg}) => (lightBg ? '#fff' : '#242424')}

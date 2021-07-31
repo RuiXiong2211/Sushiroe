@@ -49,7 +49,7 @@ const Navbar = () => {
           </MobileIcon>
           <NavMenu onClick={handleClick} click={click}>
               <NavItem>
-                  <NavLinks to='/' activeClassName='is-active' exact>
+                  <NavLinks to='/'>
                       About
                   </NavLinks>
               </NavItem>

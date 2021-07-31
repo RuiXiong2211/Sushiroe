@@ -49,23 +49,23 @@ const Navbar = () => {
           </MobileIcon>
           <NavMenu onClick={handleClick} click={click}>
               <NavItem>
-                  <NavLinks to='/' activeClassName='is-active' exact>
+                  <NavLinks to='/' activeClassName="is-active">
                       About
                   </NavLinks>
               </NavItem>
               <NavItem>
-                  <NavLinks to='/Menu' activeClassName='is-active'>
+                  <NavLinks to='/Menu' activeClassName="is-active">
                       Menu
                   </NavLinks>
               </NavItem>
               <NavItem>
-                  <NavLinks to='/Admin' activeClassName='is-active'>
+                  <NavLinks to='/Admin' activeClassName="is-active">
                       Admin
                   </NavLinks>
               </NavItem>
               <NavItemBtn>
                 {button ? (
-                  <NavBtnLink to='/Reservation'>
+                  <NavBtnLink to='/Reservation' activeClassName="is-active">
                     <Button primary>
                       Make Reservation
                       </Button>

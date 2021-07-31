@@ -82,8 +82,7 @@ export const NavItem = styled.li`
   border-bottom: 2px solid transparent;
 
   &:hover {
-    border-bottom: 2px solid;
-    border-bottom-color: #F7665A;
+    border-bottom: 2px #F7665A;
   }
 
   @media screen and (max-width: 960px) {
@@ -107,11 +106,6 @@ export const NavLinks = styled(NavLink)`
     color: #F7665A;
     font-weight: bold;
   }
-
-  &:hover {
-      color: #F7665A;
-      transition: all 0.1s ease;
-    }
 
   @media screen and (max-width: 960px) {
     text-align: center;
