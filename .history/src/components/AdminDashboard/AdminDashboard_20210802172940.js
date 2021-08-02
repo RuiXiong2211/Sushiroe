@@ -10,6 +10,7 @@ import {
   EditButton,
 } from "./AdminDashboard.elements";
 import { getReservations } from "../../services/reservations";
+import ReservationHeader from "./ReservationHeader";
 import ActionResponse from "./ActionResponse";
 
 const AdminDashboard = (reservations) => {

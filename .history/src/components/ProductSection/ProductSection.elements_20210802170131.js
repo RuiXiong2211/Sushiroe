@@ -29,6 +29,7 @@ export const ProductImg = styled.img`
 `;
 
 export const ProductsHeading = styled.h1`
+  border-bottom-width: thin;
   align-items: center;
   justify-content: center;
   border-bottom: 2px solid white;

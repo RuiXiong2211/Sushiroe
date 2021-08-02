@@ -115,7 +115,7 @@ export const sushiData = [
         img: tororoll,
         alt: 'platter',
         name: 'Chuutoro roll',
-        desc: 'Medium fatty tuna roll made from bluefin tuna, sure to melt in your mouth!',
+        desc: 'Medium fatty tuna roll, sure to melt in your mouth!',
         price: '$4.99',
     }
 ]

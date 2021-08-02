@@ -29,12 +29,17 @@ export const ProductImg = styled.img`
 `;
 
 export const ProductsHeading = styled.h1`
+  border-bottom-width: thin;
   align-items: center;
   justify-content: center;
   border-bottom: 2px solid white;
   font-size: clamp(2rem, 2.5vw, 3rem);
   text-align: center;
   margin-bottom: 5rem;
+
+  &:after {
+    width: 700px;
+  }
 `;
 
 export const ProductTitle = styled.h2`

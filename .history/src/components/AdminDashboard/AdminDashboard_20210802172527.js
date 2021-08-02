@@ -1,5 +1,6 @@
 import { React, useEffect, useState, useRef } from "react";
 import { useStore, deleteReservation } from "../../services/reservations";
+import ResvItem from "./ResvItem";
 import { DataGrid } from "@material-ui/data-grid";
 import { EditForm } from "./EditForm";
 import {
@@ -10,6 +11,7 @@ import {
   EditButton,
 } from "./AdminDashboard.elements";
 import { getReservations } from "../../services/reservations";
+import ReservationHeader from "./ReservationHeader";
 import ActionResponse from "./ActionResponse";
 
 const AdminDashboard = (reservations) => {
@@ -117,7 +119,7 @@ const AdminDashboard = (reservations) => {
       </AdminContainer>
     </>
   );
-
+  
 };
 
 export default AdminDashboard;

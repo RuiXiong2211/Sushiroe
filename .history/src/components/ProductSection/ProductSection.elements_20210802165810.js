@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ProductsContainer = styled.div`
   /* width: 100vw; */
@@ -31,6 +31,7 @@ export const ProductImg = styled.img`
 export const ProductsHeading = styled.h1`
   align-items: center;
   justify-content: center;
+  width: 80%;;
   border-bottom: 2px solid white;
   font-size: clamp(2rem, 2.5vw, 3rem);
   text-align: center;

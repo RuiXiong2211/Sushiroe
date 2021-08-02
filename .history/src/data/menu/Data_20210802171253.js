@@ -35,7 +35,7 @@ export const sliderData = [
         img: sushi,
         alt: 'sushi',
         header: 'Sushi',
-        desc: 'Masterfully crafted bite sized sushi, made to order to ensure quality.',
+        desc: 'Masterfully crafted bite sized sushi, made to order.',
     },
     {
         img: wasabi,
@@ -80,7 +80,7 @@ export const sushiData = [
         img: crabsushi,
         alt: 'crabsushi',
         name: 'Softshell Crab Roll',
-        desc: 'Crispy softshell crab roll with sesame sauce dressing. Fit for those who are afraid of raw.',
+        desc: 'Softshell crab roll with sesame sauce dressing.',
         price: '$9.99',
     },
     {
@@ -115,7 +115,7 @@ export const sushiData = [
         img: tororoll,
         alt: 'platter',
         name: 'Chuutoro roll',
-        desc: 'Medium fatty tuna roll made from bluefin tuna, sure to melt in your mouth!',
+        desc: 'Medium fatty tuna roll, sure to melt in your mouth!',
         price: '$4.99',
     }
 ]
