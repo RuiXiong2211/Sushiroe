@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Typical from "react-typical";
 import {
   InfoSec,
   InfoRow,
@@ -10,6 +11,7 @@ import {
   Subtitle,
   ImgWrapper,
   Img,
+  FloatAnimation,
 } from "./InfoSection.elements";
 import { Container, Button } from "../../globalStyles";
 
@@ -37,15 +39,23 @@ const InfoSection = ({
             <InfoColumn>
               <TextWrapper>
                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
-                <Heading lightText={lightText}>{headline}</Heading>
+                <Heading lightText={lightText}>
+                  <Typical
+                    loop={Infinity}
+                    wrapper="b"
+                    steps={[`${headline}`, 1000]}
+                  />
+                </Heading>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
                 {hasButton ? (
                   <Link to="/Reservation">
-                    <Button big fontBig primary={primary}>
-                      {buttonLabel}
-                    </Button>
+                    <FloatAnimation>
+                      <Button big fontBig primary={primary}>
+                        {buttonLabel}
+                      </Button>
+                    </FloatAnimation>
                   </Link>
-                ) : null }
+                ) : null}
               </TextWrapper>
             </InfoColumn>
             <InfoColumn>

@@ -41,10 +41,10 @@ export const homeObjThree = {
   lightTopLine: true,
   /*topLine: 'Marketing Agency',*/
   lightText: true,
-  headline: 'Ranked as one of the top Japanese restaurants in Singapore',
+  headline: 'Hope to see you soon',
   lightTextDesc: true,
   description: 
-    'Hope to see you in our restaurant soon!',
+    'Ranked one of the best restaurants in Singapore',
   buttonLabel: 'Get Started',
   primary: true,
   start: '',
