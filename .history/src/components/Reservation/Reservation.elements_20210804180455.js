@@ -23,7 +23,6 @@ export const StyledFormWrapper = styled.div`
   padding: 0 20px;
   overflow: auto;
   background-image: url(${bgImg});
-  background-size: cover;
 `;
 
 export const StyledForm = styled.form`
