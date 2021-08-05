@@ -38,6 +38,7 @@ export const homeObjThree = {
   lightBg: false,
   imgStart: '',
   lightTopLine: false,
+  /*topLine: 'About Us',*/
   lightText: true,
   headline: 'Our promise to you.',
   lightTextDesc: true,

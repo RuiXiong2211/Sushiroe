@@ -20,34 +20,35 @@ export const homeObjTwo = {
   lightBg: true,
   imgStart: 'start',
   lightTopLine: false,
-  /*topLine: 'Marketing Agency',*/
+  /*topLine: 'About Us',*/
   lightText: false,
-  headline: 'Hope to see you soon',
-  lightTextDesc: false,
-  description: 
-    'Ranked one of the best restaurants in Singapore',
-  buttonLabel: '',
-  primary: false,
-  start: '',
-  img: require('../../images/undraw_japan_ubgk.svg').default,
-  alt: 'Image',
-  hasButton: false,
-};
-
-export const homeObjThree = {
-  lightBg: false,
-  imgStart: '',
-  lightTopLine: false,
-  lightText: true,
   headline: 'Our promise to you.',
-  lightTextDesc: true,
+  lightTextDesc: false,
   description: 
     "Our customer's satisfaction are our top priority. Our wasabi is freshly grated and contains none of that horseradish bullshit. Our sushi rice is cooked with soft water from the hot springs of Mt. Fuji.",
   buttonLabel: '',
-  primary: true,
+  primary: false,
   start: '',
   img: require('../../images/home/soft-water.gif').default,
   alt: 'Image',
   hasButton: false,
   bg: true,
+};
+
+export const homeObjThree = {
+  lightBg: false,
+  imgStart: '',
+  lightTopLine: true,
+  /*topLine: 'Marketing Agency',*/
+  lightText: true,
+  headline: 'Hope to see you soon',
+  lightTextDesc: true,
+  description: 
+    'Ranked one of the best restaurants in Singapore',
+  buttonLabel: 'Get Started',
+  primary: true,
+  start: '',
+  img: require('../../images/undraw_japan_ubgk.svg').default,
+  alt: 'Image',
+  hasButton: false,
 };

@@ -56,7 +56,7 @@ export const AdminContainer = styled.div`
   display: flex;
   z-index: 1;
   width: 100%;
-  max-width: 1500px;
+  max-width: 1400px;
   height: 90vh;
   margin-right: auto;
   margin-left: auto;

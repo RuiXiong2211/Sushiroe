@@ -28,12 +28,11 @@ export const ModalWrapper = styled.div`
 `;
 
 export const CloseModalButton = styled(MdClose)`
-  top: 0;
-  right: 6px;
   cursor: pointer;
-  position: absolute;
+  float: bottom right;
+  position: flex;
   font-size: 2rem;
   padding: 0;
   z-index: 10;
-  color: #606060;
+  color: black;
 `;

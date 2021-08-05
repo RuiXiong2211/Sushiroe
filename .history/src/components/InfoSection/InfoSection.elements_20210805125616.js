@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 export const InfoSec = styled.div`
-  height: 100%;
   color: #fff;
   padding: 160px 0;
-  background: ${({ lightBg }) => (lightBg ? '#fff' : '#242424')};
+  background: ${({ lightBg }) => (lightBg ? '#fff' : '#101522')};
 `;
 
 export const InfoRow = styled.div`
@@ -61,7 +60,6 @@ export const Img = styled.img`
   vertical-align: middle;
   display: inline-block;
   max-height: 500px;
-  border-radius: 10px;
 `;
 
 export const Heading = styled.h1`
@@ -78,23 +76,4 @@ export const Subtitle = styled.p`
   font-size: 18px;
   line-height: 24px;
   color: ${({ lightTextDesc }) => (lightTextDesc ? '#a9b3c1' : '#1c2237')};
-`;
-
-export const FloatAnimation = styled.div`
-  max-width: fit-content;
-  animation: float 1.5s ease-in-out infinite;
-  @keyframes float {
-    0% {
-      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-      transform: translatex(0px);
-    }
-    50% {
-      box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-      transform: translatey(3px);
-    }
-    100% {
-      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-      transform: translatex(0px);
-    }
-  }
 `;

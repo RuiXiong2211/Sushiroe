@@ -35,5 +35,5 @@ export const CloseModalButton = styled(MdClose)`
   font-size: 2rem;
   padding: 0;
   z-index: 10;
-  color: #606060;
+  color: #242424;
 `;

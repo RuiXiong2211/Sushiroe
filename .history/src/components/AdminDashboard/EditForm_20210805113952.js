@@ -85,6 +85,16 @@ export const EditForm = ({ showModal, setShowModal, selectedRow, reservations, o
     editReservation(selectedRow[0], state);
     console.log(reservations);
 
+    // initialState = {
+    //   name: "",
+    //   email: "",
+    //   phone: "",
+    //   pax: "",
+    //   date: "",
+    //   time: "",
+    // };
+    // setState(initialState);
+
     //close modal and show response message
     setShowModal(!showModal)
     setResponse("Success: we have updated your reservation!")
@@ -114,12 +124,13 @@ export const EditForm = ({ showModal, setShowModal, selectedRow, reservations, o
                   aria-label="Close modal"
                   onClick={() => setShowModal((prev) => !prev)}
                 />
+                <label htmlFor="id"> ID </label>
                 <StyledInput
                   type="text"
                   name="ID"
                   maxLength="30"
-                  value={"ID: " + state.id}
-                  disabled
+                  value={state.id}
+                  onChange={handleInput}
                 />
                 <label htmlFor="name"> Name </label>
                 <StyledInput

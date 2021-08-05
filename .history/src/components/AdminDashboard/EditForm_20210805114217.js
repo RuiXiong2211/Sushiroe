@@ -85,6 +85,16 @@ export const EditForm = ({ showModal, setShowModal, selectedRow, reservations, o
     editReservation(selectedRow[0], state);
     console.log(reservations);
 
+    // initialState = {
+    //   name: "",
+    //   email: "",
+    //   phone: "",
+    //   pax: "",
+    //   date: "",
+    //   time: "",
+    // };
+    // setState(initialState);
+
     //close modal and show response message
     setShowModal(!showModal)
     setResponse("Success: we have updated your reservation!")
@@ -118,8 +128,8 @@ export const EditForm = ({ showModal, setShowModal, selectedRow, reservations, o
                   type="text"
                   name="ID"
                   maxLength="30"
-                  value={"ID: " + state.id}
-                  disabled
+                  value={"ID" + state.id}
+                  readonly
                 />
                 <label htmlFor="name"> Name </label>
                 <StyledInput

@@ -34,7 +34,7 @@ export const StyledForm = styled.form`
   background-color: #fff;
   border-radius: 10px;
   box-sizing: border-box;
-  border: 2px solid;
+  border: 5px;
   border-color: #242424;
   //box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -61,8 +61,6 @@ export const StyledButton = styled.button`
   padding: 0 20px;
   cursor: pointer;
   box-sizing: border-box;
-  text-align: center;
-  margin: 0 auto;
 
   &:hover {
     background-color: crimson;

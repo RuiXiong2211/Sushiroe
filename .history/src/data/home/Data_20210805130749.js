@@ -17,17 +17,17 @@ export const homeObjOne = {
 };
 
 export const homeObjTwo = {
-  lightBg: true,
-  imgStart: 'start',
-  lightTopLine: false,
+  lightBg: false,
+  imgStart: '',
+  lightTopLine: true,
   /*topLine: 'Marketing Agency',*/
-  lightText: false,
+  lightText: true,
   headline: 'Hope to see you soon',
-  lightTextDesc: false,
+  lightTextDesc: true,
   description: 
     'Ranked one of the best restaurants in Singapore',
   buttonLabel: '',
-  primary: false,
+  primary: true,
   start: '',
   img: require('../../images/undraw_japan_ubgk.svg').default,
   alt: 'Image',
@@ -35,16 +35,17 @@ export const homeObjTwo = {
 };
 
 export const homeObjThree = {
-  lightBg: false,
-  imgStart: '',
+  lightBg: true,
+  imgStart: 'start',
   lightTopLine: false,
-  lightText: true,
+  /*topLine: 'About Us',*/
+  lightText: false,
   headline: 'Our promise to you.',
-  lightTextDesc: true,
+  lightTextDesc: false,
   description: 
     "Our customer's satisfaction are our top priority. Our wasabi is freshly grated and contains none of that horseradish bullshit. Our sushi rice is cooked with soft water from the hot springs of Mt. Fuji.",
   buttonLabel: '',
-  primary: true,
+  primary: false,
   start: '',
   img: require('../../images/home/soft-water.gif').default,
   alt: 'Image',

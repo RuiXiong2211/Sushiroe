@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 export const InfoSec = styled.div`
-  height: 100%;
   color: #fff;
   padding: 160px 0;
-  background: ${({ lightBg }) => (lightBg ? '#fff' : '#242424')};
+  background: ${({ lightBg }) => (lightBg ? '#fff' : '#D0A373')};
 `;
 
 export const InfoRow = styled.div`
@@ -61,7 +60,6 @@ export const Img = styled.img`
   vertical-align: middle;
   display: inline-block;
   max-height: 500px;
-  border-radius: 10px;
 `;
 
 export const Heading = styled.h1`

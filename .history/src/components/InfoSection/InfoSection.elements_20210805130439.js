@@ -61,7 +61,6 @@ export const Img = styled.img`
   vertical-align: middle;
   display: inline-block;
   max-height: 500px;
-  border-radius: 10px;
 `;
 
 export const Heading = styled.h1`

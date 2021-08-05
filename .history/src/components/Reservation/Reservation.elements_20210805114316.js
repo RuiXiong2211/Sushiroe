@@ -61,8 +61,7 @@ export const StyledButton = styled.button`
   padding: 0 20px;
   cursor: pointer;
   box-sizing: border-box;
-  text-align: center;
-  margin: 0 auto;
+  justify-content: center;
 
   &:hover {
     background-color: crimson;
