@@ -1,6 +1,10 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
+/*
+function that scrolls page to the top, used when clicking a button.
+*/
+
 export default function ScrollToTop() {
     const { pathname } = useLocation()
     useEffect(() => {
