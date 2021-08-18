@@ -4,7 +4,7 @@ export const homeObjOne = {
   lightTopLine: true,
   topLine: 'About Us',
   lightText: false,
-  headline: 'Sushiroe.',
+  headline: 'Sushiroe',
   lightTextDesc: false,
   description: 
     'We serve Japanese cuisine that strives to be as authentic as possible, with authentic ingredients sourced from Japan.',
@@ -21,10 +21,10 @@ export const homeObjTwo = {
   imgStart: 'start',
   lightTopLine: false,
   lightText: false,
-  headline: 'Michelin bib gourmand 2021.',
+  headline: 'Ranked as one of the top Japanese restaurants in Singapore',
   lightTextDesc: false,
   description: 
-    'We are known to be one of the best Japanese restaurants in Singapore and have been awarded the highly acclaimed Michelin bib gourmand in 2021!',
+    'Ranked one of the best restaurants in Singapore',
   buttonLabel: '',
   primary: false,
   start: '',
@@ -41,7 +41,7 @@ export const homeObjThree = {
   headline: 'Our promise to you.',
   lightTextDesc: false,
   description: 
-    "Our customer's satisfaction are our top priority. We only use the ingredients of the best quality, our dishes are made using water from the springs of Mt. Fuji.",
+    "Our customer's satisfaction are our top priority. Our wasabi is freshly grated and contains none of that horseradish bullshit. Our sushi rice is cooked with soft water from the hot springs of Mt. Fuji.",
   buttonLabel: '',
   primary: true,
   start: '',

@@ -41,7 +41,7 @@ export const homeObjThree = {
   headline: 'Our promise to you.',
   lightTextDesc: false,
   description: 
-    "Our customer's satisfaction are our top priority. We only use the ingredients of the best quality, our dishes are made using water from the springs of Mt. Fuji.",
+    "Our customer's satisfaction are our top priority.",
   buttonLabel: '',
   primary: true,
   start: '',
