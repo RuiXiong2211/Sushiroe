@@ -24,8 +24,6 @@ export const ProductCard = styled.div`
   overflow: hidden;
   &:hover {
       transform: scale(1.15); 
-      transition-timing-function: ease-in;
-      transition: 0.2s;
   }
 `;
 

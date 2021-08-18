@@ -95,12 +95,12 @@ export const EditButton = styled(Button)`
     padding: 5px;
     margin: 10px;
     border: 2px solid olive;
-    background-color: #fff;
+    background-color: olive;
     border-radius: 30px;
-    color: olive;
+    color: #fff;
     &:hover {
+      transform: scale(1.15) perspective(1px);
       background-color: olive;
-      color: #fff;
     }
   }
 `;

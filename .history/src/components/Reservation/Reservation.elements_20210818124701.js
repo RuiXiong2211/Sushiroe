@@ -29,6 +29,7 @@ export const PageContainer = styled.div`
 
 `;
 export const StyledFormWrapper = styled.div`
+
   padding: 20px;
   position: relative;
   border-radius: 20px;
@@ -46,6 +47,7 @@ export const StyledForm = styled.form`
   //box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.2);
   position: relative;
   display: block;
+
   @media screen and (max-width: 768px) {
     padding: 40px;
   }
@@ -103,8 +105,10 @@ export const StyledFieldset = styled.fieldset`
 `;
 
 export const FaqContainer = styled.div`
+  width: 50%;
+  background-color: pink;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 15px;
-  position: flex;
+  position: absolute;
 `;

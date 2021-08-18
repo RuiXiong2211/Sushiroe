@@ -193,10 +193,8 @@ const Reservation = (reservations) => {
             )}
             <StyledButton type="submit">Submit</StyledButton>
           </StyledForm>
-          <FaqContainer>
-            <Faq />
-            <MapContainer />
-          </FaqContainer>
+          <Faq />
+          <MapContainer />
         </StyledFormWrapper>
       </PageContainer>
     </>

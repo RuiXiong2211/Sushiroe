@@ -31,11 +31,11 @@ function Footer() {
           </SocialLogo>
           <WebsiteRights>Sushiroe © 2021</WebsiteRights>
           <SocialIcons>
-            <SocialIconLink href="https:facebook.com/" target="_blank" aria-label="Facebook">
-              <FaFacebook />
+            <SocialIconLink href="https:facebook.com/" target="_blank" aria-label="Facebook" icon="spinner" pulse>
+              <FaFacebook icon="spinner" pulse/>
             </SocialIconLink>
             <SocialIconLink href="https:instagram.com/" target="_blank" aria-label="Instagram">
-              <FaInstagram />
+              <FaInstagram icon="spinner" pulse/>
             </SocialIconLink>
             <SocialIconLink
               href=

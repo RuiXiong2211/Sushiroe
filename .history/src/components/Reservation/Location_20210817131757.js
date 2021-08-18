@@ -11,7 +11,7 @@ const containerStyle = {
   display: "inline-block",
   position: "relative",
   width: "400px",
-  height: "295px",
+  height: "300px",
 };
 class MapContainer extends React.Component {
   state = {
@@ -39,7 +39,7 @@ class MapContainer extends React.Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: key
+  apiKey: process.env.REACT_APP_GOOGLE_KEY
 })(MapContainer);
 
 export const Location = () => {

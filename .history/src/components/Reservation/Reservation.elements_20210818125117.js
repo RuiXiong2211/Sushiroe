@@ -46,6 +46,7 @@ export const StyledForm = styled.form`
   //box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.2);
   position: relative;
   display: block;
+  justify-content: center;
   @media screen and (max-width: 768px) {
     padding: 40px;
   }
@@ -107,4 +108,5 @@ export const FaqContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   padding: 15px;
   position: flex;
+  align-self: center;
 `;

@@ -32,7 +32,7 @@ function Footer() {
           <WebsiteRights>Sushiroe © 2021</WebsiteRights>
           <SocialIcons>
             <SocialIconLink href="https:facebook.com/" target="_blank" aria-label="Facebook">
-              <FaFacebook />
+              <FaFacebook spin/>
             </SocialIconLink>
             <SocialIconLink href="https:instagram.com/" target="_blank" aria-label="Instagram">
               <FaInstagram />

@@ -24,8 +24,6 @@ export const ProductCard = styled.div`
   overflow: hidden;
   &:hover {
       transform: scale(1.15); 
-      transition-timing-function: ease-in;
-      transition: 0.2s;
   }
 `;
 
@@ -56,7 +54,6 @@ export const ProductInfo = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 10px;
 `;
 
 export const ProductDesc = styled.p`

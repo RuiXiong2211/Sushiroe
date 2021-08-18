@@ -18,22 +18,26 @@ export const Header = styled.h2`
 
 export const PageContainer = styled.div`
   display: flex;
+
   //justify-content: center;
   //align-items: center;
-  //flex-direction: column;
+  flex-direction: column;
   min-height: 100vh;
   padding: 20px;
   background-image: url(${bgImg});
   background-size: fill;
-  justify-content: center;
-
 `;
 export const StyledFormWrapper = styled.div`
+  display: flex;
+  //justify-content: center;
+  //align-items: center;
+  flex-direction: column;
   padding: 20px;
   position: relative;
-  border-radius: 20px;
+  min-height: 100vh;
+  min-width: 40vw;
+  justify-content: center;
   background-color: #fff;
-  width: 50%;
 `;
 
 export const StyledForm = styled.form`
@@ -41,11 +45,14 @@ export const StyledForm = styled.form`
   width: 100%;
   max-width: 700px;
   padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
   box-sizing: border-box;
-  //box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   //box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.2);
   position: relative;
   display: block;
+
   @media screen and (max-width: 768px) {
     padding: 40px;
   }
@@ -103,8 +110,11 @@ export const StyledFieldset = styled.fieldset`
 `;
 
 export const FaqContainer = styled.div`
+  width: 100%;
+  background-color: transparent;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 15px;
-  position: flex;
+  text-align: center;
+  position: relative;
 `;

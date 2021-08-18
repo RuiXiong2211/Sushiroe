@@ -84,6 +84,7 @@ export const DeleteButton = styled(Button)`
     &:hover {
       background-color: red;
       color: white;
+      transition-timing-function: ease-in-out;
     }
   }
 `;

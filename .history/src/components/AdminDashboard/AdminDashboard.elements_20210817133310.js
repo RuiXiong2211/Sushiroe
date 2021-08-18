@@ -84,6 +84,7 @@ export const DeleteButton = styled(Button)`
     &:hover {
       background-color: red;
       color: white;
+      transition-timing-function: ease-in-out;
     }
   }
 `;
@@ -100,7 +101,6 @@ export const EditButton = styled(Button)`
     color: olive;
     &:hover {
       background-color: olive;
-      color: #fff;
     }
   }
 `;

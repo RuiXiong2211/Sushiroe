@@ -29,9 +29,12 @@ export const PageContainer = styled.div`
 
 `;
 export const StyledFormWrapper = styled.div`
+  //justify-content: center;
+  //align-items: center;
+  //flex-direction: column;
   padding: 20px;
   position: relative;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: #fff;
   width: 50%;
 `;
@@ -46,6 +49,7 @@ export const StyledForm = styled.form`
   //box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.2);
   position: relative;
   display: block;
+
   @media screen and (max-width: 768px) {
     padding: 40px;
   }
@@ -103,8 +107,10 @@ export const StyledFieldset = styled.fieldset`
 `;
 
 export const FaqContainer = styled.div`
+  width: 50%;
+  background-color: transparent;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 15px;
-  position: flex;
+  position: absolute;
 `;
