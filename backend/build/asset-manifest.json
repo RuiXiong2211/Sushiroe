@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.js": "/static/js/main.c22fc75e.chunk.js",
+    "main.js.map": "/static/js/main.c22fc75e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ed12993f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ed12993f.js.map",
+    "static/css/2.b7d8c0c2.chunk.css": "/static/css/2.b7d8c0c2.chunk.css",
+    "static/js/2.98cc17fa.chunk.js": "/static/js/2.98cc17fa.chunk.js",
+    "static/js/2.98cc17fa.chunk.js.map": "/static/js/2.98cc17fa.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.b7d8c0c2.chunk.css.map": "/static/css/2.b7d8c0c2.chunk.css.map",
+    "static/js/2.98cc17fa.chunk.js.LICENSE.txt": "/static/js/2.98cc17fa.chunk.js.LICENSE.txt",
+    "static/media/Sushi.36bde5fd.jpg": "/static/media/Sushi.36bde5fd.jpg",
+    "static/media/bukakke-crab.f435fde2.jpg": "/static/media/bukakke-crab.f435fde2.jpg",
+    "static/media/chuutoro.a2c72677.jpg": "/static/media/chuutoro.a2c72677.jpg",
+    "static/media/donburi.c0c00f4d.jpg": "/static/media/donburi.c0c00f4d.jpg",
+    "static/media/formbg.ee41b903.jpg": "/static/media/formbg.ee41b903.jpg",
+    "static/media/matcha.5cfe5cde.jpg": "/static/media/matcha.5cfe5cde.jpg",
+    "static/media/matcha.a92e174d.jpg": "/static/media/matcha.a92e174d.jpg",
+    "static/media/mixed-sushi.9a4d6b17.jpg": "/static/media/mixed-sushi.9a4d6b17.jpg",
+    "static/media/platter.461c2df7.jpg": "/static/media/platter.461c2df7.jpg",
+    "static/media/pokebowl.5d66c956.jpg": "/static/media/pokebowl.5d66c956.jpg",
+    "static/media/premium-bowl.250a0ab3.jpg": "/static/media/premium-bowl.250a0ab3.jpg",
+    "static/media/sake.f21b3239.jpg": "/static/media/sake.f21b3239.jpg",
+    "static/media/salmonavoroll.fdb9e677.jpg": "/static/media/salmonavoroll.fdb9e677.jpg",
+    "static/media/sashimi-don.b49c0ee2.jpg": "/static/media/sashimi-don.b49c0ee2.jpg",
+    "static/media/sashimi.bc878f80.jpg": "/static/media/sashimi.bc878f80.jpg",
+    "static/media/soft-water.gif": "/static/media/soft-water.21d0ed8c.gif",
+    "static/media/sushi.628f36f9.jpg": "/static/media/sushi.628f36f9.jpg",
+    "static/media/sushi1.jpg": "/static/media/sushi1.d6da35b0.jpg",
+    "static/media/undraw_japan_ubgk.svg": "/static/media/undraw_japan_ubgk.4540f32c.svg",
+    "static/media/uni-sushi.fcc2529e.jpg": "/static/media/uni-sushi.fcc2529e.jpg",
+    "static/media/wasabi.aabd5883.png": "/static/media/wasabi.aabd5883.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ed12993f.js",
+    "static/css/2.b7d8c0c2.chunk.css",
+    "static/js/2.98cc17fa.chunk.js",
+    "static/js/main.c22fc75e.chunk.js"
+  ]
+}

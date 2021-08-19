@@ -2,7 +2,7 @@ import axios from "axios";
 import emailjs from "emailjs-com";
 import create from "zustand";
 
-const baseUrl = "/app/reservation";
+const baseUrl = "app/reservation";
 
 export const useStore = create((set) => ({
   reservations: [],

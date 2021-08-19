@@ -122,7 +122,6 @@ export const EditForm = ({ showModal, setShowModal, selectedRow, reservations, o
                 />
                 <StyledInput
                   type="text"
-                  placeholder="Name"
                   name="name"
                   maxLength="30"
                   value={state.name}
@@ -130,7 +129,6 @@ export const EditForm = ({ showModal, setShowModal, selectedRow, reservations, o
                 />
                 <StyledInput
                   type="email"
-                  placeholder="Email"
                   name="email"
                   maxLength="30"
                   value={state.email}
@@ -138,7 +136,6 @@ export const EditForm = ({ showModal, setShowModal, selectedRow, reservations, o
                 />
                 <StyledInput
                   type="text"
-                  placeholder="Phone"
                   name="phone"
                   maxLength="8"
                   value={state.phone}
@@ -146,7 +143,6 @@ export const EditForm = ({ showModal, setShowModal, selectedRow, reservations, o
                 />
                 <StyledInput
                   type="number"
-                  placeholder="Pax"
                   name="pax"
                   min="0"
                   max="5"
@@ -155,7 +151,6 @@ export const EditForm = ({ showModal, setShowModal, selectedRow, reservations, o
                 />
                 <StyledInput
                   type="date"
-                  placeholder="Date"
                   name="date"
                   min="2021-07-12"
                   value={state.date}
