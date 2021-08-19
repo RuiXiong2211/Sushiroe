@@ -29,6 +29,7 @@ export const StyledFormWrapper = styled.div`
   position: relative;
   background-color: #fff;
   width: 80%;
+
 `;
 
 export const StyledForm = styled.form`
