@@ -4,7 +4,7 @@
   "description": "reservation-form",
   "main": "server.js",
   "scripts": {
-    "build:ui": "rm -rf build && cd .. && yarn run build --prod && cp -r build ../backend",
+    "build:ui": "rm -rf build && cd ../ && yarn run build --prod && robocopy build backend/build && cd backend",
     "deploy": "git push heroku master",
     "deploy:full": "yarn run build:ui && git add . && git commit -m uibuild && yarn run deploy",
     "start":"nodemon server.js"
