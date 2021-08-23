@@ -1,0 +1,11 @@
+POST http://localhost:4000/app/reservation/
+Content-Type: application/json
+
+{
+"name":"bobo",
+"email": "valkyrie@gmail.com",
+"phone": "90129009",
+"pax": "2",
+"date": "2021-07-25",
+"time": "13:00",
+}
