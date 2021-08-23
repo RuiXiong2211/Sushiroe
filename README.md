@@ -1,3 +1,12 @@
+# About
+
+https://sushiroe.herokuapp.com/
+
+Sushiroe is a hypothetical restaurant website created for the purpose of practicing the MERN (MongoDB, express, ReactJS, Node) stack. 
+
+It is styled using react-styled components. Some of the notable libraries used include EmailJS for automated emails and MaterialUI's datagrid for the display of reservations.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
