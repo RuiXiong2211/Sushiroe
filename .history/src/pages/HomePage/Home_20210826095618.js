@@ -1,4 +1,4 @@
-import { React, useRef } from "react";
+import { React, useRef, useEffect } from "react";
 import { InfoSection } from "../../components";
 import { homeObjOne, homeObjTwo, homeObjThree } from "../../data/home/Data";
 import useScrollSnap from "react-use-scroll-snap";

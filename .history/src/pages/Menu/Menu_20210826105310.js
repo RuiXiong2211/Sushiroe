@@ -6,6 +6,7 @@ import {
   sushiData,
   drinksData,
 } from "../../data/menu/Data";
+import SimpleImageSlider from "react-simple-image-slider";
 
 const Menu = () => {
 

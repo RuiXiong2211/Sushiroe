@@ -23,7 +23,7 @@ function App() {
   }, [reservations]);
 
   return (
-    <Router forceRefresh>
+    <Router>
       <GlobalStyle />
       <ScrollToTop />
       <Navbar />

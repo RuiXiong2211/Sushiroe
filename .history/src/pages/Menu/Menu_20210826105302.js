@@ -1,11 +1,13 @@
 import { React } from "react";
 import { ImageSlider, ProductSection } from "../../components";
 import {
+  img
   sliderData,
   productData,
   sushiData,
   drinksData,
 } from "../../data/menu/Data";
+import SimpleImageSlider from "react-simple-image-slider";
 
 const Menu = () => {
 

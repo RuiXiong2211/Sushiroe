@@ -39,26 +39,7 @@ const InfoSection = ({
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
               <TextWrapper>
-                <TopLine lightTopLine={lightTopLine}>
-                  {topLine ? (
-                    <Typical
-                      loop={Infinity}
-                      wrapper="b"
-                      steps={[
-                        `${topLine}`,
-                        3000,
-                        "Sushi",
-                        3000,
-                        "Seafood",
-                        3000,
-                        "Sake",
-                        3000,
-                        "Kaisendon",
-                        3000,
-                      ]}
-                    />
-                  ) : null}
-                </TopLine>
+                <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
                 {hasButton ? (

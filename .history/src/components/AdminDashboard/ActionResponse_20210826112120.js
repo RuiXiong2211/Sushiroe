@@ -20,7 +20,7 @@ const ActionResponse = ({open, setOpen, response}) => {
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">
-          {"Response"}
+          
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">

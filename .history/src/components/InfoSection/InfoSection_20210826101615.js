@@ -46,15 +46,15 @@ const InfoSection = ({
                       wrapper="b"
                       steps={[
                         `${topLine}`,
-                        3000,
+                        5000,
                         "Sushi",
-                        3000,
+                        5000,
                         "Seafood",
-                        3000,
+                        5000,
                         "Sake",
-                        3000,
+                        5000,
                         "Kaisendon",
-                        3000,
+                        5000,
                       ]}
                     />
                   ) : null}

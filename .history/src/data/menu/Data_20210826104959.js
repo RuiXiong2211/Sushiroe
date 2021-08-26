@@ -35,7 +35,6 @@ export const img = [
         url: tea
     },
 ]
-
 export const sliderData = [
     {
         img: donburi,

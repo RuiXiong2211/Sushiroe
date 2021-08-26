@@ -40,24 +40,23 @@ const InfoSection = ({
             <InfoColumn>
               <TextWrapper>
                 <TopLine lightTopLine={lightTopLine}>
-                  {topLine ? (
-                    <Typical
-                      loop={Infinity}
-                      wrapper="b"
-                      steps={[
-                        `${topLine}`,
-                        3000,
-                        "Sushi",
-                        3000,
-                        "Seafood",
-                        3000,
-                        "Sake",
-                        3000,
-                        "Kaisendon",
-                        3000,
-                      ]}
-                    />
-                  ) : null}
+                  {topLine} ?
+                  <Typical
+                    loop={Infinity}
+                    wrapper="b"
+                    steps={[
+                      `${topLine}`,
+                      5000,
+                      "Sushi",
+                      5000,
+                      "Seafood",
+                      5000,
+                      "Sake",
+                      5000,
+                      "Kaisendon",
+                      5000,
+                    ]}
+                  />
                 </TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>

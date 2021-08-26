@@ -7,6 +7,7 @@ import {
   drinksData,
 } from "../../data/menu/Data";
 
+
 const Menu = () => {
 
   return (
